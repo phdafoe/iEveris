@@ -67,7 +67,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="1TT-5P-EQE"/>
                     <connections>
-                        <segue destination="97d-uN-rkp" kind="show" id="HM4-Fu-Pi3"/>
+                        <segue destination="97d-uN-rkp" kind="show" identifier="showConcursoSegue" id="HM4-Fu-Pi3"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MCa-Jl-Cq8" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -683,6 +683,6 @@
         <image name="cerrasX" width="16" height="16"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="dzm-hM-ajm"/>
+        <segue reference="HM4-Fu-Pi3"/>
     </inferredMetricsTieBreakers>
 </document>

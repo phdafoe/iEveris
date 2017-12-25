@@ -14,7 +14,7 @@ import APESuperHUD
 class OfertasTableViewController: UITableViewController {
     
     //MARK: - Variables locales
-    var arrayOfertas : [GenericModelData] = []
+    var arrayGenerico : [GenericModelData] = []
     
     //Diccionario para almacenar localmente las imágenes
     var imagenSeleccionada : UIImage?
@@ -26,7 +26,7 @@ class OfertasTableViewController: UITableViewController {
         super.viewDidLoad()
         
         //LLAMADA A DATOS
-        llamadaOfertas()
+        llamadaGenerica()
 
         //TODO: - Registro de celda
         tableView.register(UINib(nibName: "GenericTableViewCell", bundle: nil), forCellReuseIdentifier: "GenericTableViewCell")
@@ -46,7 +46,7 @@ class OfertasTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return arrayOfertas.count
+        return arrayGenerico.count
     }
 
     
@@ -55,7 +55,7 @@ class OfertasTableViewController: UITableViewController {
         
         let customCell = tableView.dequeueReusableCell(withIdentifier: "GenericTableViewCell", for: indexPath) as! GenericTableViewCell
 
-        let model = arrayOfertas[indexPath.row]
+        let model = arrayGenerico[indexPath.row]
         
         customCell.myNombreOferta.text = model.nombre
         customCell.myFechaOferta.text = model.fechaFin
@@ -103,7 +103,7 @@ class OfertasTableViewController: UITableViewController {
             
             let detalleVC = segue.destination as! DetalleGenericoTableViewController
             let selectInd = tableView.indexPathForSelectedRow?.row
-            let objInd = arrayOfertas[selectInd!]
+            let objInd = arrayGenerico[selectInd!]
             
             //Asignar la oferta seleccionada
             detalleVC.oferta = objInd
@@ -127,7 +127,7 @@ class OfertasTableViewController: UITableViewController {
     
 
     //MARK: - UTILS
-    func llamadaOfertas(){
+    func llamadaGenerica(){
         
         let datosOfertas = ParserGenerico()
         let idLocalidad = "11"
@@ -141,7 +141,7 @@ class OfertasTableViewController: UITableViewController {
                                                                 idTipo: tipoOferta,
                                                                 idParametro: tipoParametro))
             }.then{_ in
-                self.arrayOfertas = datosOfertas.getParserGenerico()
+                self.arrayGenerico = datosOfertas.getParserGenerico()
             }.then{_ in
                 self.tableView.reloadData()
             }.then{_ in
