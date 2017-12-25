@@ -24,14 +24,14 @@ class ParserGenerico: NSObject {
         print(request)
         
         return Alamofire.request(request).responseJSON().then{(data) -> JSON in
-            self.jsonDataPromociones = JSON(data)
-            return self.jsonDataPromociones!
+            self.jsonDataGenerico = JSON(data)
+            return self.jsonDataGenerico!
         }
     }
     
     func getParserGenerico() -> [GenericModelData]{
         var arrayPromocionesModel = [GenericModelData]()
-        for c_Promocion in (jsonDataPromociones?["promociones"])!{
+        for c_Promocion in (jsonDataGenerico?["promociones"])!{
             
             let asociadoModel = AsociadoModel(pId: dimeString(c_Promocion.1["asociado"], nombre: "id"),
                                                 pNombre: dimeString(c_Promocion.1["asociado"], nombre: "nombre"),
