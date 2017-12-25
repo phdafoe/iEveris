@@ -18,13 +18,22 @@
 		4100ADAD1FF141A300565366 /* HerramientaPostMuroTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4100ADAC1FF141A300565366 /* HerramientaPostMuroTableViewController.swift */; };
 		4100ADB21FF1424B00565366 /* GenericTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4100ADB01FF1424B00565366 /* GenericTableViewCell.swift */; };
 		4100ADB31FF1424B00565366 /* GenericTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4100ADB11FF1424B00565366 /* GenericTableViewCell.xib */; };
+		4100ADB51FF143CD00565366 /* GenericModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4100ADB41FF143CD00565366 /* GenericModelData.swift */; };
+		41689E591FF1459500359DDD /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41689E5E1FF1459500359DDD /* Alamofire.framework */; };
+		41689E5A1FF1459500359DDD /* APESuperHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41689E5F1FF1459500359DDD /* APESuperHUD.framework */; };
+		41689E5B1FF1459500359DDD /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41689E601FF1459500359DDD /* Kingfisher.framework */; };
+		41689E5C1FF1459500359DDD /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41689E611FF1459500359DDD /* PromiseKit.framework */; };
+		41689E5D1FF1459500359DDD /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41689E621FF1459500359DDD /* SwiftyJSON.framework */; };
 		4170C3151FEEBE5D00A9F50A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4170C3141FEEBE5D00A9F50A /* AppDelegate.swift */; };
 		4170C31A1FEEBE5D00A9F50A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4170C3181FEEBE5D00A9F50A /* Main.storyboard */; };
 		4170C31C1FEEBE5D00A9F50A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4170C31B1FEEBE5D00A9F50A /* Assets.xcassets */; };
 		4170C31F1FEEBE5D00A9F50A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4170C31D1FEEBE5D00A9F50A /* LaunchScreen.storyboard */; };
+		E93A508BE3551F7E2422941B /* Pods_iEveris.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33D4B3610F85304C9DBC0217 /* Pods_iEveris.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1C838CE07A2679F9BE1EB4D2 /* Pods-iEveris.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iEveris.release.xcconfig"; path = "Pods/Target Support Files/Pods-iEveris/Pods-iEveris.release.xcconfig"; sourceTree = "<group>"; };
+		33D4B3610F85304C9DBC0217 /* Pods_iEveris.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iEveris.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4100AD9B1FF13B2C00565366 /* API_UTILS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API_UTILS.swift; sourceTree = "<group>"; };
 		4100AD9D1FF13C4800565366 /* API_HELPERS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API_HELPERS.swift; sourceTree = "<group>"; };
 		4100ADA01FF1412300565366 /* OfertasTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfertasTableViewController.swift; sourceTree = "<group>"; };
@@ -36,12 +45,19 @@
 		4100ADAC1FF141A300565366 /* HerramientaPostMuroTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HerramientaPostMuroTableViewController.swift; sourceTree = "<group>"; };
 		4100ADB01FF1424B00565366 /* GenericTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericTableViewCell.swift; sourceTree = "<group>"; };
 		4100ADB11FF1424B00565366 /* GenericTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GenericTableViewCell.xib; sourceTree = "<group>"; };
+		4100ADB41FF143CD00565366 /* GenericModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericModelData.swift; sourceTree = "<group>"; };
+		41689E5E1FF1459500359DDD /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		41689E5F1FF1459500359DDD /* APESuperHUD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = APESuperHUD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		41689E601FF1459500359DDD /* Kingfisher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Kingfisher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		41689E611FF1459500359DDD /* PromiseKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = PromiseKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		41689E621FF1459500359DDD /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4170C3111FEEBE5D00A9F50A /* iEveris.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iEveris.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4170C3141FEEBE5D00A9F50A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4170C3191FEEBE5D00A9F50A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4170C31B1FEEBE5D00A9F50A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4170C31E1FEEBE5D00A9F50A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4170C3201FEEBE5D00A9F50A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAEE951A4EB1F538E448975D /* Pods-iEveris.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iEveris.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iEveris/Pods-iEveris.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,12 +65,40 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41689E591FF1459500359DDD /* Alamofire.framework in Frameworks */,
+				41689E5A1FF1459500359DDD /* APESuperHUD.framework in Frameworks */,
+				41689E5B1FF1459500359DDD /* Kingfisher.framework in Frameworks */,
+				41689E5C1FF1459500359DDD /* PromiseKit.framework in Frameworks */,
+				41689E5D1FF1459500359DDD /* SwiftyJSON.framework in Frameworks */,
+				E93A508BE3551F7E2422941B /* Pods_iEveris.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		00CC8DDEB58B59643135DD9D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				41689E5E1FF1459500359DDD /* Alamofire.framework */,
+				41689E5F1FF1459500359DDD /* APESuperHUD.framework */,
+				41689E601FF1459500359DDD /* Kingfisher.framework */,
+				41689E611FF1459500359DDD /* PromiseKit.framework */,
+				41689E621FF1459500359DDD /* SwiftyJSON.framework */,
+				33D4B3610F85304C9DBC0217 /* Pods_iEveris.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0BAB9546BA1CF547844882D0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FAEE951A4EB1F538E448975D /* Pods-iEveris.debug.xcconfig */,
+				1C838CE07A2679F9BE1EB4D2 /* Pods-iEveris.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		4100AD9A1FF13AFA00565366 /* API */ = {
 			isa = PBXGroup;
 			children = (
@@ -82,6 +126,7 @@
 		4100ADAE1FF141DC00565366 /* MODELS */ = {
 			isa = PBXGroup;
 			children = (
+				4100ADB41FF143CD00565366 /* GenericModelData.swift */,
 			);
 			path = MODELS;
 			sourceTree = "<group>";
@@ -100,6 +145,8 @@
 			children = (
 				4170C3131FEEBE5D00A9F50A /* iEveris */,
 				4170C3121FEEBE5D00A9F50A /* Products */,
+				0BAB9546BA1CF547844882D0 /* Pods */,
+				00CC8DDEB58B59643135DD9D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -133,9 +180,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4170C3231FEEBE5D00A9F50A /* Build configuration list for PBXNativeTarget "iEveris" */;
 			buildPhases = (
+				7A699DD3EDACD54DD19C213B /* [CP] Check Pods Manifest.lock */,
 				4170C30D1FEEBE5D00A9F50A /* Sources */,
 				4170C30E1FEEBE5D00A9F50A /* Frameworks */,
 				4170C30F1FEEBE5D00A9F50A /* Resources */,
+				904727CE32E3FCE3221A8A4A /* [CP] Embed Pods Frameworks */,
+				51810AD3B609734AE6CE1E1E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -194,6 +244,68 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		51810AD3B609734AE6CE1E1E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iEveris/Pods-iEveris-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7A699DD3EDACD54DD19C213B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-iEveris-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		904727CE32E3FCE3221A8A4A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-iEveris/Pods-iEveris-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/APESuperHUD/APESuperHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/PromiseKit/PromiseKit.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/APESuperHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PromiseKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iEveris/Pods-iEveris-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		4170C30D1FEEBE5D00A9F50A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -204,6 +316,7 @@
 				4100ADA71FF1415400565366 /* DetalleGenericoTableViewController.swift in Sources */,
 				4100ADAD1FF141A300565366 /* HerramientaPostMuroTableViewController.swift in Sources */,
 				4100ADA91FF1416900565366 /* WebGenericoViewController.swift in Sources */,
+				4100ADB51FF143CD00565366 /* GenericModelData.swift in Sources */,
 				4100ADA51FF1414300565366 /* CuponesTableViewController.swift in Sources */,
 				4100ADB21FF1424B00565366 /* GenericTableViewCell.swift in Sources */,
 				4170C3151FEEBE5D00A9F50A /* AppDelegate.swift in Sources */,
@@ -344,6 +457,7 @@
 		};
 		4170C3241FEEBE5D00A9F50A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FAEE951A4EB1F538E448975D /* Pods-iEveris.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -359,6 +473,7 @@
 		};
 		4170C3251FEEBE5D00A9F50A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1C838CE07A2679F9BE1EB4D2 /* Pods-iEveris.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
