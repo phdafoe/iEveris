@@ -1,5 +1,5 @@
 //
-//  ParserOfertas.swift
+//  ParserGenerico.swift
 //  iEveris
 //
 //  Created by Andres on 25/12/17.
@@ -11,16 +11,16 @@ import SwiftyJSON
 import PromiseKit
 import Alamofire
 
-class ParserOfertas: NSObject {
+class ParserGenerico: NSObject {
     
     /*http://app.clubsinergias.es/api_comercios.php?idlocalidad=11&tipo=oferta&p=promociones
      CONSTANTES.LLAMADAS.BASE_URL + CONSTANTES.LLAMADAS.BASEIDLOCALIDAD + idLocalidad + CONSTANTES.LLAMADAS.BASEIDTIPO + idTipo + CONSTANTES.LLAMADAS.BASEIDP + idParametro*/
     //http://andresocampo.com/pruebas/iSaldos/concursos.json
     
-    var jsonDataPromociones : JSON?
+    var jsonDataGenerico : JSON?
     
-    func getDatosPromociones(_ idLocalidad : String, idTipo : String, idParametro : String) -> Promise<JSON>{
-        let request = URLRequest(url: URL(string: CONSTANTES.LLAMADAS.BASE_URL_OFERTAS)!)
+    func getDatosGenerico(_ idLocalidad : String, idTipo : String, idParametro : String) -> Promise<JSON>{
+        let request = URLRequest(url: URL(string:  CONSTANTES.LLAMADAS.BASE_URL + CONSTANTES.LLAMADAS.BASEIDLOCALIDAD + idLocalidad + CONSTANTES.LLAMADAS.BASEIDTIPO + idTipo + CONSTANTES.LLAMADAS.BASEIDP + idParametro)!)
         print(request)
         
         return Alamofire.request(request).responseJSON().then{(data) -> JSON in
@@ -29,7 +29,7 @@ class ParserOfertas: NSObject {
         }
     }
     
-    func getParserPromociones() -> [GenericModelData]{
+    func getParserGenerico() -> [GenericModelData]{
         var arrayPromocionesModel = [GenericModelData]()
         for c_Promocion in (jsonDataPromociones?["promociones"])!{
             
