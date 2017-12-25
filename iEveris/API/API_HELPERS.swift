@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import MessageUI
+import SwiftyJSON
 
 let customPrefs = UserDefaults.standard
 
@@ -34,7 +35,7 @@ func configuredMailComposeViewController() -> MFMailComposeViewController{
 }
 
 //MARK: - NULL TO String
-/*public func dimeString(_ j : JSON, nombre : String) -> String{
+public func dimeString(_ j : JSON, nombre : String) -> String{
     if let stringResult = j[nombre].string{
         return stringResult
     }else{
@@ -67,4 +68,4 @@ public func dimeDouble(_ j : JSON, nombre : String) -> Double{
     }else{
         return 0
     }
-}*/
+}
