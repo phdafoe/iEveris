@@ -9,8 +9,14 @@
 /* Begin PBXBuildFile section */
 		4100AD9C1FF13B2C00565366 /* API_UTILS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4100AD9B1FF13B2C00565366 /* API_UTILS.swift */; };
 		4100AD9E1FF13C4800565366 /* API_HELPERS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4100AD9D1FF13C4800565366 /* API_HELPERS.swift */; };
+		4100ADA11FF1412300565366 /* OfertasTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4100ADA01FF1412300565366 /* OfertasTableViewController.swift */; };
+		4100ADA31FF1413800565366 /* ConcursosTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4100ADA21FF1413800565366 /* ConcursosTableViewController.swift */; };
+		4100ADA51FF1414300565366 /* CuponesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4100ADA41FF1414300565366 /* CuponesTableViewController.swift */; };
+		4100ADA71FF1415400565366 /* DetalleGenericoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4100ADA61FF1415400565366 /* DetalleGenericoTableViewController.swift */; };
+		4100ADA91FF1416900565366 /* WebGenericoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4100ADA81FF1416900565366 /* WebGenericoViewController.swift */; };
+		4100ADAB1FF1418700565366 /* MuroTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4100ADAA1FF1418700565366 /* MuroTableViewController.swift */; };
+		4100ADAD1FF141A300565366 /* HerramientaPostMuroTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4100ADAC1FF141A300565366 /* HerramientaPostMuroTableViewController.swift */; };
 		4170C3151FEEBE5D00A9F50A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4170C3141FEEBE5D00A9F50A /* AppDelegate.swift */; };
-		4170C3171FEEBE5D00A9F50A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4170C3161FEEBE5D00A9F50A /* ViewController.swift */; };
 		4170C31A1FEEBE5D00A9F50A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4170C3181FEEBE5D00A9F50A /* Main.storyboard */; };
 		4170C31C1FEEBE5D00A9F50A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4170C31B1FEEBE5D00A9F50A /* Assets.xcassets */; };
 		4170C31F1FEEBE5D00A9F50A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4170C31D1FEEBE5D00A9F50A /* LaunchScreen.storyboard */; };
@@ -19,9 +25,15 @@
 /* Begin PBXFileReference section */
 		4100AD9B1FF13B2C00565366 /* API_UTILS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API_UTILS.swift; sourceTree = "<group>"; };
 		4100AD9D1FF13C4800565366 /* API_HELPERS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API_HELPERS.swift; sourceTree = "<group>"; };
+		4100ADA01FF1412300565366 /* OfertasTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfertasTableViewController.swift; sourceTree = "<group>"; };
+		4100ADA21FF1413800565366 /* ConcursosTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcursosTableViewController.swift; sourceTree = "<group>"; };
+		4100ADA41FF1414300565366 /* CuponesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CuponesTableViewController.swift; sourceTree = "<group>"; };
+		4100ADA61FF1415400565366 /* DetalleGenericoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalleGenericoTableViewController.swift; sourceTree = "<group>"; };
+		4100ADA81FF1416900565366 /* WebGenericoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebGenericoViewController.swift; sourceTree = "<group>"; };
+		4100ADAA1FF1418700565366 /* MuroTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuroTableViewController.swift; sourceTree = "<group>"; };
+		4100ADAC1FF141A300565366 /* HerramientaPostMuroTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HerramientaPostMuroTableViewController.swift; sourceTree = "<group>"; };
 		4170C3111FEEBE5D00A9F50A /* iEveris.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iEveris.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4170C3141FEEBE5D00A9F50A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4170C3161FEEBE5D00A9F50A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4170C3191FEEBE5D00A9F50A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4170C31B1FEEBE5D00A9F50A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4170C31E1FEEBE5D00A9F50A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -48,6 +60,20 @@
 			path = API;
 			sourceTree = "<group>";
 		};
+		4100AD9F1FF1410300565366 /* VIEW_CONTROLLERS */ = {
+			isa = PBXGroup;
+			children = (
+				4100ADA01FF1412300565366 /* OfertasTableViewController.swift */,
+				4100ADA21FF1413800565366 /* ConcursosTableViewController.swift */,
+				4100ADA41FF1414300565366 /* CuponesTableViewController.swift */,
+				4100ADA61FF1415400565366 /* DetalleGenericoTableViewController.swift */,
+				4100ADA81FF1416900565366 /* WebGenericoViewController.swift */,
+				4100ADAA1FF1418700565366 /* MuroTableViewController.swift */,
+				4100ADAC1FF141A300565366 /* HerramientaPostMuroTableViewController.swift */,
+			);
+			path = VIEW_CONTROLLERS;
+			sourceTree = "<group>";
+		};
 		4170C3081FEEBE5D00A9F50A = {
 			isa = PBXGroup;
 			children = (
@@ -67,9 +93,9 @@
 		4170C3131FEEBE5D00A9F50A /* iEveris */ = {
 			isa = PBXGroup;
 			children = (
+				4100AD9F1FF1410300565366 /* VIEW_CONTROLLERS */,
 				4100AD9A1FF13AFA00565366 /* API */,
 				4170C3141FEEBE5D00A9F50A /* AppDelegate.swift */,
-				4170C3161FEEBE5D00A9F50A /* ViewController.swift */,
 				4170C3181FEEBE5D00A9F50A /* Main.storyboard */,
 				4170C31B1FEEBE5D00A9F50A /* Assets.xcassets */,
 				4170C31D1FEEBE5D00A9F50A /* LaunchScreen.storyboard */,
@@ -150,10 +176,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4100ADA11FF1412300565366 /* OfertasTableViewController.swift in Sources */,
 				4100AD9E1FF13C4800565366 /* API_HELPERS.swift in Sources */,
-				4170C3171FEEBE5D00A9F50A /* ViewController.swift in Sources */,
+				4100ADA71FF1415400565366 /* DetalleGenericoTableViewController.swift in Sources */,
+				4100ADAD1FF141A300565366 /* HerramientaPostMuroTableViewController.swift in Sources */,
+				4100ADA91FF1416900565366 /* WebGenericoViewController.swift in Sources */,
+				4100ADA51FF1414300565366 /* CuponesTableViewController.swift in Sources */,
 				4170C3151FEEBE5D00A9F50A /* AppDelegate.swift in Sources */,
 				4100AD9C1FF13B2C00565366 /* API_UTILS.swift in Sources */,
+				4100ADAB1FF1418700565366 /* MuroTableViewController.swift in Sources */,
+				4100ADA31FF1413800565366 /* ConcursosTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
