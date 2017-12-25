@@ -17,9 +17,9 @@ class GenericModelData: NSObject {
     var imagen : String?
     var fechaFin : String?
     var masInformacion : String?
-    var asociado : ISAsociadoModel?
+    var asociado : AsociadoModel?
     
-    init(pId : String, pTipoPromocion : String, pNombre : String, pImporte : String, pImagen : String, pFechaFin : String, pMasInformacion : String, pAsociado : ISAsociadoModel) {
+    init(pId : String, pTipoPromocion : String, pNombre : String, pImporte : String, pImagen : String, pFechaFin : String, pMasInformacion : String, pAsociado : AsociadoModel) {
         
         self.id = pId
         self.tipoPromocion = pTipoPromocion
@@ -34,7 +34,7 @@ class GenericModelData: NSObject {
     
 }
 
-class ISAsociadoModel: NSObject {
+class AsociadoModel: NSObject {
     var id : String?
     var nombre : String?
     var descripcion : String?
