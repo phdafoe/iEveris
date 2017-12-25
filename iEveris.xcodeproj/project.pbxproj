@@ -16,6 +16,8 @@
 		4100ADA91FF1416900565366 /* WebGenericoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4100ADA81FF1416900565366 /* WebGenericoViewController.swift */; };
 		4100ADAB1FF1418700565366 /* MuroTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4100ADAA1FF1418700565366 /* MuroTableViewController.swift */; };
 		4100ADAD1FF141A300565366 /* HerramientaPostMuroTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4100ADAC1FF141A300565366 /* HerramientaPostMuroTableViewController.swift */; };
+		4100ADB21FF1424B00565366 /* GenericTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4100ADB01FF1424B00565366 /* GenericTableViewCell.swift */; };
+		4100ADB31FF1424B00565366 /* GenericTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4100ADB11FF1424B00565366 /* GenericTableViewCell.xib */; };
 		4170C3151FEEBE5D00A9F50A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4170C3141FEEBE5D00A9F50A /* AppDelegate.swift */; };
 		4170C31A1FEEBE5D00A9F50A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4170C3181FEEBE5D00A9F50A /* Main.storyboard */; };
 		4170C31C1FEEBE5D00A9F50A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4170C31B1FEEBE5D00A9F50A /* Assets.xcassets */; };
@@ -32,6 +34,8 @@
 		4100ADA81FF1416900565366 /* WebGenericoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebGenericoViewController.swift; sourceTree = "<group>"; };
 		4100ADAA1FF1418700565366 /* MuroTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuroTableViewController.swift; sourceTree = "<group>"; };
 		4100ADAC1FF141A300565366 /* HerramientaPostMuroTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HerramientaPostMuroTableViewController.swift; sourceTree = "<group>"; };
+		4100ADB01FF1424B00565366 /* GenericTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericTableViewCell.swift; sourceTree = "<group>"; };
+		4100ADB11FF1424B00565366 /* GenericTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GenericTableViewCell.xib; sourceTree = "<group>"; };
 		4170C3111FEEBE5D00A9F50A /* iEveris.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iEveris.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4170C3141FEEBE5D00A9F50A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4170C3191FEEBE5D00A9F50A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -63,6 +67,7 @@
 		4100AD9F1FF1410300565366 /* VIEW_CONTROLLERS */ = {
 			isa = PBXGroup;
 			children = (
+				4100ADAF1FF1421800565366 /* GENERIC_CELL */,
 				4100ADA01FF1412300565366 /* OfertasTableViewController.swift */,
 				4100ADA21FF1413800565366 /* ConcursosTableViewController.swift */,
 				4100ADA41FF1414300565366 /* CuponesTableViewController.swift */,
@@ -72,6 +77,22 @@
 				4100ADAC1FF141A300565366 /* HerramientaPostMuroTableViewController.swift */,
 			);
 			path = VIEW_CONTROLLERS;
+			sourceTree = "<group>";
+		};
+		4100ADAE1FF141DC00565366 /* MODELS */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = MODELS;
+			sourceTree = "<group>";
+		};
+		4100ADAF1FF1421800565366 /* GENERIC_CELL */ = {
+			isa = PBXGroup;
+			children = (
+				4100ADB01FF1424B00565366 /* GenericTableViewCell.swift */,
+				4100ADB11FF1424B00565366 /* GenericTableViewCell.xib */,
+			);
+			path = GENERIC_CELL;
 			sourceTree = "<group>";
 		};
 		4170C3081FEEBE5D00A9F50A = {
@@ -93,6 +114,7 @@
 		4170C3131FEEBE5D00A9F50A /* iEveris */ = {
 			isa = PBXGroup;
 			children = (
+				4100ADAE1FF141DC00565366 /* MODELS */,
 				4100AD9F1FF1410300565366 /* VIEW_CONTROLLERS */,
 				4100AD9A1FF13AFA00565366 /* API */,
 				4170C3141FEEBE5D00A9F50A /* AppDelegate.swift */,
@@ -164,6 +186,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4170C31F1FEEBE5D00A9F50A /* LaunchScreen.storyboard in Resources */,
+				4100ADB31FF1424B00565366 /* GenericTableViewCell.xib in Resources */,
 				4170C31C1FEEBE5D00A9F50A /* Assets.xcassets in Resources */,
 				4170C31A1FEEBE5D00A9F50A /* Main.storyboard in Resources */,
 			);
@@ -182,6 +205,7 @@
 				4100ADAD1FF141A300565366 /* HerramientaPostMuroTableViewController.swift in Sources */,
 				4100ADA91FF1416900565366 /* WebGenericoViewController.swift in Sources */,
 				4100ADA51FF1414300565366 /* CuponesTableViewController.swift in Sources */,
+				4100ADB21FF1424B00565366 /* GenericTableViewCell.swift in Sources */,
 				4170C3151FEEBE5D00A9F50A /* AppDelegate.swift in Sources */,
 				4100AD9C1FF13B2C00565366 /* API_UTILS.swift in Sources */,
 				4100ADAB1FF1418700565366 /* MuroTableViewController.swift in Sources */,
