@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kb0-zk-UgR">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="kb0-zk-UgR">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -99,7 +98,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="MIP-EE-vdW"/>
                     <connections>
-                        <segue destination="97d-uN-rkp" kind="show" id="dzm-hM-ajm"/>
+                        <segue destination="97d-uN-rkp" kind="show" identifier="showCuponesSegue" id="dzm-hM-ajm"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EmX-67-qnf" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -639,7 +638,7 @@
                         <subviews>
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vq6-B5-Udk">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </webView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qBC-m0-J45">
                                 <rect key="frame" x="338" y="52" width="21" height="21"/>
@@ -659,15 +658,14 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="OnI-rp-Ag1" firstAttribute="centerX" secondItem="VNL-5P-FqT" secondAttribute="centerX" id="4eZ-oE-MzW"/>
+                            <constraint firstItem="vq6-B5-Udk" firstAttribute="top" secondItem="VNL-5P-FqT" secondAttribute="top" id="Et2-2d-zNt"/>
                             <constraint firstAttribute="trailing" secondItem="qBC-m0-J45" secondAttribute="trailing" constant="16" id="Hol-74-hfA"/>
                             <constraint firstItem="vq6-B5-Udk" firstAttribute="leading" secondItem="VNL-5P-FqT" secondAttribute="leading" id="Rps-7e-W28"/>
-                            <constraint firstItem="w0a-5u-7GV" firstAttribute="top" secondItem="vq6-B5-Udk" secondAttribute="bottom" constant="-34" id="Ycs-AM-n2s"/>
                             <constraint firstAttribute="trailing" secondItem="vq6-B5-Udk" secondAttribute="trailing" id="cgK-uw-3Qc"/>
-                            <constraint firstItem="vq6-B5-Udk" firstAttribute="top" secondItem="2wK-t7-EhR" secondAttribute="bottom" constant="-44" id="m6g-BY-hlI"/>
+                            <constraint firstAttribute="bottom" secondItem="vq6-B5-Udk" secondAttribute="bottom" id="jg8-yd-FZ2"/>
                             <constraint firstItem="qBC-m0-J45" firstAttribute="top" secondItem="2wK-t7-EhR" secondAttribute="bottom" constant="8" id="o7D-gg-hkD"/>
                             <constraint firstItem="OnI-rp-Ag1" firstAttribute="centerY" secondItem="VNL-5P-FqT" secondAttribute="centerY" id="y9I-0u-Eks"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="mb8-ve-ue6"/>
                     </view>
                     <connections>
                         <outlet property="myActivityIndicator" destination="OnI-rp-Ag1" id="uGa-fM-nhy"/>
@@ -683,6 +681,6 @@
         <image name="cerrasX" width="16" height="16"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="HM4-Fu-Pi3"/>
+        <segue reference="dzm-hM-ajm"/>
     </inferredMetricsTieBreakers>
 </document>

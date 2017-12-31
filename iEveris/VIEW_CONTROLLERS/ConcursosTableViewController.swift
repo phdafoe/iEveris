@@ -15,11 +15,7 @@ class ConcursosTableViewController: UITableViewController {
 
     //MARK: - Variables locales
     var arrayGenerico : [GenericModelData] = []
-    
-    //Diccionario para almacenar localmente las imágenes
-    var imagenSeleccionada : UIImage?
-    var diccionarioImagenes = [String: UIImage?]()
-    
+    var customCellData : GenericTableViewCell?
     
     
     override func viewDidLoad() {
@@ -51,49 +47,22 @@ class ConcursosTableViewController: UITableViewController {
     
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        
+        let modeldata = arrayGenerico[indexPath.row]
         let customCell = tableView.dequeueReusableCell(withIdentifier: "GenericTableViewCell", for: indexPath) as! GenericTableViewCell
-        
-        let model = arrayGenerico[indexPath.row]
-        
-        customCell.myNombreOferta.text = model.nombre
-        customCell.myFechaOferta.text = model.fechaFin
-        customCell.myInformacionOferta.text = model.masInformacion
-        customCell.myImporteOferta.text = model.importe
-        
-        //Recuperar en background la imagen
-        if var pathImagen = model.imagen {
-            
-            pathImagen = CONSTANTES.LLAMADAS.BASE_URL + pathImagen
-            
-            
-            let pathComplete = getImagePath(CONSTANTES.LLAMADAS.OFERTAS, id: model.id!, name: model.imagen!)
-            customCell.myImagenOferta.kf.setImage(with: ImageResource(downloadURL: URL(string: pathComplete)!),
-                                                  placeholder: #imageLiteral(resourceName: "placeholder"),
-                                                  options: [.transition(ImageTransition.fade(1))],
-                                                  progressBlock: nil,
-                                                  completionHandler: { (image, error, cacheType, imageUrl) in
-                                                    //guardamos las imágenes en un diccionario
-                                                    self.diccionarioImagenes[model.id!] = image!
-            })
-        }
-        
-        return customCell
+        let cell = EVERISRellenarCeldas().tipoGenericoOfertas(customCell,
+                                                              arrayGenerico: modeldata,
+                                                              row: indexPath.row)
+        customCellData = cell
+        return cell
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 310
     }
     
-    func getImagePath(_ type: String, id : String!, name : String!) -> String{
-        return CONSTANTES.LLAMADAS.BASE_PHOTO_URL + id + "/" + name
-    }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        let customCell = tableView.dequeueReusableCell(withIdentifier: "GenericTableViewCell", for: indexPath) as! GenericTableViewCell
-        imagenSeleccionada = customCell.myImagenOferta.image
+        imagenSeleccionada = customCellData?.myImagenOferta.image
         performSegue(withIdentifier: "showConcursoSegue", sender: self)
         
     }
