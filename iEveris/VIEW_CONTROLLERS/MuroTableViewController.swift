@@ -44,11 +44,7 @@ class MuroTableViewController: UITableViewController {
         case 0:
             return 1
         default:
-            if taskManager.descripcionPost.count == 0{
-                return 0
-            }else{
-                return taskManager.descripcionPost.count
-            }
+            return taskManager.descripcionPost.count
         }
        
     }
@@ -81,15 +77,7 @@ class MuroTableViewController: UITableViewController {
             let arrayDescripcion = taskManager.descripcionPost[indexPath.row]
             let arrayFotoTareas = taskManager.fotoPost[indexPath.row]
             
-            
             postCustomCell.myInformacionOferta.text = arrayDescripcion[CONSTANTES.NSURSER_DEFAULT.KEY_DESCRIPCION_POST] as! String?
-            
-//            if let imagenDes = arrayDescripcion[CONSTANTES.NSURSER_DEFAULT.KEY_DESCRIPCION_POST]{
-//                postCustomCell.myImagenOferta.image = UIImage(named: imagenDes as! String)
-//            }else{
-//                postCustomCell.myImagenOferta.image = UIImage(named: "img_no_icon")
-//            }
-            
             
             if let imagenPostDes = arrayFotoTareas[CONSTANTES.NSURSER_DEFAULT.KEY_IMAGEN_POST] as? Data{
                 let storage = imagenPostDes

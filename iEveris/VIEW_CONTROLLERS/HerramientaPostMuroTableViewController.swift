@@ -76,6 +76,7 @@ class HerramientaPostMuroTableViewController: UITableViewController {
             taskManager.descripcionPost.append([CONSTANTES.NSURSER_DEFAULT.KEY_DESCRIPCION_POST : myDescripcionFotoTip.text  as String])
             taskManager.fotoPost.append([CONSTANTES.NSURSER_DEFAULT.KEY_IMAGEN_POST : imageData! as Data])
             dismiss(animated: true, completion: nil)
+            taskManager.salvarDatos()
         }else{
             present(muestraAlertVC("Atención",
                                    messageData: "Rellena todos los campos"),
