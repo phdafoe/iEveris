@@ -20,6 +20,7 @@
 		4100ADB31FF1424B00565366 /* GenericTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4100ADB11FF1424B00565366 /* GenericTableViewCell.xib */; };
 		4100ADB51FF143CD00565366 /* GenericModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4100ADB41FF143CD00565366 /* GenericModelData.swift */; };
 		41227F5E1FF8EAEA0022FD6E /* APITaskManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41227F5D1FF8EAEA0022FD6E /* APITaskManager.swift */; };
+		41227F601FF8F08E0022FD6E /* GenericTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41227F5F1FF8F08E0022FD6E /* GenericTableView.swift */; };
 		41689E591FF1459500359DDD /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41689E5E1FF1459500359DDD /* Alamofire.framework */; };
 		41689E5A1FF1459500359DDD /* APESuperHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41689E5F1FF1459500359DDD /* APESuperHUD.framework */; };
 		41689E5B1FF1459500359DDD /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41689E601FF1459500359DDD /* Kingfisher.framework */; };
@@ -49,6 +50,7 @@
 		4100ADB11FF1424B00565366 /* GenericTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GenericTableViewCell.xib; sourceTree = "<group>"; };
 		4100ADB41FF143CD00565366 /* GenericModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericModelData.swift; sourceTree = "<group>"; };
 		41227F5D1FF8EAEA0022FD6E /* APITaskManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APITaskManager.swift; sourceTree = "<group>"; };
+		41227F5F1FF8F08E0022FD6E /* GenericTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericTableView.swift; sourceTree = "<group>"; };
 		41689E5E1FF1459500359DDD /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		41689E5F1FF1459500359DDD /* APESuperHUD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = APESuperHUD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		41689E601FF1459500359DDD /* Kingfisher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Kingfisher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -150,6 +152,7 @@
 			children = (
 				41689E641FF1469F00359DDD /* ParserGenerico.swift */,
 				41227F5D1FF8EAEA0022FD6E /* APITaskManager.swift */,
+				41227F5F1FF8F08E0022FD6E /* GenericTableView.swift */,
 			);
 			path = PARSER_MAPPER;
 			sourceTree = "<group>";
@@ -335,6 +338,7 @@
 				41689E651FF1469F00359DDD /* ParserGenerico.swift in Sources */,
 				4100ADA51FF1414300565366 /* CuponesTableViewController.swift in Sources */,
 				4100ADB21FF1424B00565366 /* GenericTableViewCell.swift in Sources */,
+				41227F601FF8F08E0022FD6E /* GenericTableView.swift in Sources */,
 				4170C3151FEEBE5D00A9F50A /* AppDelegate.swift in Sources */,
 				4100AD9C1FF13B2C00565366 /* API_UTILS.swift in Sources */,
 				4100ADAB1FF1418700565366 /* MuroTableViewController.swift in Sources */,

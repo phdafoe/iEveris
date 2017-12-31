@@ -69,3 +69,8 @@ public func dimeDouble(_ j : JSON, nombre : String) -> Double{
         return 0
     }
 }
+
+
+public func getImagePath(_ type: String, id : String!, name : String!) -> String{
+    return CONSTANTES.LLAMADAS.BASE_PHOTO_URL + id + "/" + name
+}

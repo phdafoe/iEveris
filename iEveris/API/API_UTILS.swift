@@ -14,6 +14,8 @@ let taskManager = APITaskManager.sharedInstance
 typealias diccionario = [String : Any]
 typealias arrayDiccionario = [diccionario]
 
+var imagenSeleccionada : UIImage?
+var diccionarioImagenes = [String: UIImage?]()
 
 struct Constantes {
     let COLORES = Colores()
