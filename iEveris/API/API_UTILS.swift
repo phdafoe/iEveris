@@ -10,15 +10,20 @@ import Foundation
 import UIKit
 
 let CONSTANTES = Constantes()
+let taskManager = APITaskManager.sharedInstance
+typealias diccionario = [String : Any]
+typealias arrayDiccionario = [diccionario]
+
 
 struct Constantes {
     let COLORES = Colores()
     let LLAMADAS = LLamadas()
+    let NSURSER_DEFAULT = CustomUserDefault()
     
 }
 
 struct Colores {
-    let GRIS_NAV_TAB = #colorLiteral(red: 0.1764705926, green: 0.4980392158, blue: 0.7568627596, alpha: 1)
+    let AZUL_NAV_TAB = #colorLiteral(red: 0.1764705926, green: 0.4980392158, blue: 0.7568627596, alpha: 1)
     let BLANCO_TEXTO_NAV = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
 }
 
@@ -47,4 +52,11 @@ struct LLamadas {
     
 }
 
+struct CustomUserDefault {
+    
+    let USER_DEFAULT = UserDefaults.standard
+    let KEY_TAREAS = "tasks"
+    let KEY_DESCRIPCION_POST = "descripcion"
+    let KEY_IMAGEN_POST = "imagen"
+}
 

@@ -11,34 +11,76 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
+    //MARK : - Variables locales
+    var puedoRotar = false
+    var orientacionDisponible : UIInterfaceOrientationMask = .portrait
+    
+    
     var window: UIWindow?
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        //Aqui cargamos el metodo cargarDatos() que vienen de Disco
+        taskManager.cargarDatos()
+        
+        //Aqui personalizamos la UI de la app
+        personalizaUI()
+        
         return true
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
-        // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
-        // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
+        //Aqui salvamos los datos
+        taskManager.salvarDatos()
     }
 
     func applicationDidEnterBackground(_ application: UIApplication) {
-        // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
-        // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+        //Aqui salvamos los datos
+        taskManager.salvarDatos()
     }
 
     func applicationWillEnterForeground(_ application: UIApplication) {
-        // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
+        //Aqui cargamos los datos
+        taskManager.cargarDatos()
     }
 
     func applicationDidBecomeActive(_ application: UIApplication) {
-        // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+        //Aqui cargamos los datos
+        taskManager.cargarDatos()
     }
 
     func applicationWillTerminate(_ application: UIApplication) {
-        // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+        //Aqui salvamos los datos
+        taskManager.salvarDatos()
+    }
+    
+    //MARK: - Orientacion del dispositivo
+    func application(_ application: UIApplication, supportedInterfaceOrientationsFor window: UIWindow?) -> UIInterfaceOrientationMask {
+        if puedoRotar == true{
+            return .all
+        }else{
+            return orientacionDisponible
+        }
+    }
+    
+    //Personalizacion de la UI de la APP en un solo sitio
+    func personalizaUI(){
+        let navBar = UINavigationBar.appearance()
+        let tabBar = UITabBar.appearance()
+        let toolBar = UIToolbar.appearance()
+        
+        navBar.barTintColor = CONSTANTES.COLORES.AZUL_NAV_TAB
+        tabBar.barTintColor = CONSTANTES.COLORES.AZUL_NAV_TAB
+        
+        toolBar.barTintColor = CONSTANTES.COLORES.AZUL_NAV_TAB
+        toolBar.tintColor = CONSTANTES.COLORES.BLANCO_TEXTO_NAV
+        
+        navBar.tintColor = CONSTANTES.COLORES.BLANCO_TEXTO_NAV
+        tabBar.tintColor = CONSTANTES.COLORES.BLANCO_TEXTO_NAV
+        
+        navBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor : CONSTANTES.COLORES.BLANCO_TEXTO_NAV]
     }
 
 

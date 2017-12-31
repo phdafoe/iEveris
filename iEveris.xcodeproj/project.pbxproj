@@ -19,6 +19,7 @@
 		4100ADB21FF1424B00565366 /* GenericTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4100ADB01FF1424B00565366 /* GenericTableViewCell.swift */; };
 		4100ADB31FF1424B00565366 /* GenericTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4100ADB11FF1424B00565366 /* GenericTableViewCell.xib */; };
 		4100ADB51FF143CD00565366 /* GenericModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4100ADB41FF143CD00565366 /* GenericModelData.swift */; };
+		41227F5E1FF8EAEA0022FD6E /* APITaskManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41227F5D1FF8EAEA0022FD6E /* APITaskManager.swift */; };
 		41689E591FF1459500359DDD /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41689E5E1FF1459500359DDD /* Alamofire.framework */; };
 		41689E5A1FF1459500359DDD /* APESuperHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41689E5F1FF1459500359DDD /* APESuperHUD.framework */; };
 		41689E5B1FF1459500359DDD /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41689E601FF1459500359DDD /* Kingfisher.framework */; };
@@ -47,6 +48,7 @@
 		4100ADB01FF1424B00565366 /* GenericTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericTableViewCell.swift; sourceTree = "<group>"; };
 		4100ADB11FF1424B00565366 /* GenericTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GenericTableViewCell.xib; sourceTree = "<group>"; };
 		4100ADB41FF143CD00565366 /* GenericModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericModelData.swift; sourceTree = "<group>"; };
+		41227F5D1FF8EAEA0022FD6E /* APITaskManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APITaskManager.swift; sourceTree = "<group>"; };
 		41689E5E1FF1459500359DDD /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		41689E5F1FF1459500359DDD /* APESuperHUD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = APESuperHUD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		41689E601FF1459500359DDD /* Kingfisher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Kingfisher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -147,6 +149,7 @@
 			isa = PBXGroup;
 			children = (
 				41689E641FF1469F00359DDD /* ParserGenerico.swift */,
+				41227F5D1FF8EAEA0022FD6E /* APITaskManager.swift */,
 			);
 			path = PARSER_MAPPER;
 			sourceTree = "<group>";
@@ -325,6 +328,7 @@
 				4100ADA11FF1412300565366 /* OfertasTableViewController.swift in Sources */,
 				4100AD9E1FF13C4800565366 /* API_HELPERS.swift in Sources */,
 				4100ADA71FF1415400565366 /* DetalleGenericoTableViewController.swift in Sources */,
+				41227F5E1FF8EAEA0022FD6E /* APITaskManager.swift in Sources */,
 				4100ADAD1FF141A300565366 /* HerramientaPostMuroTableViewController.swift in Sources */,
 				4100ADA91FF1416900565366 /* WebGenericoViewController.swift in Sources */,
 				4100ADB51FF143CD00565366 /* GenericModelData.swift in Sources */,
