@@ -12,18 +12,21 @@ class WebGenericoViewController: UIViewController {
 
     //MARK: - Variables Locales
     var urlWeb : String?
-    
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
     
     @IBOutlet weak var myActivityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var myWebView: UIWebView!
     
     
     @IBAction func myCerrarVentanaACTION(_ sender: UIButton) {
+        appDelegate.puedoRotar = false
         dismiss(animated: true, completion: nil)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+         appDelegate.puedoRotar = true
         
         //Mostrar activity inicialmente
         myActivityIndicator.isHidden = false
@@ -35,6 +38,11 @@ class WebGenericoViewController: UIViewController {
         let url = URL(string: "http://" + urlWeb!)
         let peticion = URLRequest(url: url!)
         myWebView.loadRequest(peticion)
+    }
+    
+    //DEBERIA AUTORITARSE
+    override var shouldAutorotate: Bool{
+        return true
     }
     
 }

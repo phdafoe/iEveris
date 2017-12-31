@@ -21,6 +21,8 @@ class OfertasTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.title = "OFERTAS"
+        
         //LLAMADA A DATOS
         llamadaGenerica()
 

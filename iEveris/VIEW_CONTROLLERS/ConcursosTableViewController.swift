@@ -21,6 +21,8 @@ class ConcursosTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.title = "CONCURSOS"
+        
         //LLAMADA A DATOS
         llamadaGenerica()
         
