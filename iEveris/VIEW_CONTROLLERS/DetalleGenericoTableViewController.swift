@@ -80,11 +80,6 @@ class DetalleGenericoTableViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    //MARK: - Utils
-    func getImagePath(_ type: String, id : String!, name : String!) -> String{
-        return CONSTANTES.LLAMADAS.BASE_PHOTO_URL + id + "/" + name
-    }
-    
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         

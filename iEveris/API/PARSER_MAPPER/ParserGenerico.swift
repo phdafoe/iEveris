@@ -21,8 +21,6 @@ class ParserGenerico: NSObject {
     
     func getDatosGenerico(_ idLocalidad : String, idTipo : String, idParametro : String) -> Promise<JSON>{
         let request = URLRequest(url: URL(string:  CONSTANTES.LLAMADAS.BASE_URL + CONSTANTES.LLAMADAS.BASEIDLOCALIDAD + idLocalidad + CONSTANTES.LLAMADAS.BASEIDTIPO + idTipo + CONSTANTES.LLAMADAS.BASEIDP + idParametro)!)
-        print(request)
-        
         return Alamofire.request(request).responseJSON().then{(data) -> JSON in
             self.jsonDataGenerico = JSON(data)
             return self.jsonDataGenerico!
@@ -32,7 +30,6 @@ class ParserGenerico: NSObject {
     func getParserGenerico() -> [GenericModelData]{
         var arrayPromocionesModel = [GenericModelData]()
         for c_Promocion in (jsonDataGenerico?["promociones"])!{
-            
             let asociadoModel = AsociadoModel(pId: dimeString(c_Promocion.1["asociado"], nombre: "id"),
                                                 pNombre: dimeString(c_Promocion.1["asociado"], nombre: "nombre"),
                                                 pDescripcion: dimeString(c_Promocion.1["asociado"], nombre: "descripcion"),
@@ -46,7 +43,6 @@ class ParserGenerico: NSObject {
                                                 pMail: dimeString(c_Promocion.1["asociado"], nombre: "mail"),
                                                 pWeb: dimeString(c_Promocion.1["asociado"], nombre: "web"))
             
-            
             let promocionesModel = GenericModelData(pId: dimeString(c_Promocion.1, nombre: "id"),
                                                   pTipoPromocion: dimeString(c_Promocion.1, nombre: "tipoPromocion"),
                                                   pNombre: dimeString(c_Promocion.1, nombre: "nombre"),
@@ -55,13 +51,8 @@ class ParserGenerico: NSObject {
                                                   pFechaFin: dimeString(c_Promocion.1, nombre: "fechaFin"),
                                                   pMasInformacion: dimeString(c_Promocion.1, nombre: "masInformacion"),
                                                   pAsociado: asociadoModel)
-            
             arrayPromocionesModel.append(promocionesModel)
         }
         return arrayPromocionesModel
     }
-    
-    
-    
-
 }

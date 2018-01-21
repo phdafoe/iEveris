@@ -25,11 +25,8 @@
                             <constraint firstAttribute="width" secondItem="Zzm-Zx-WR9" secondAttribute="height" multiplier="32:21" id="9Y7-qL-8kk"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="woy-OK-Udt">
-                        <rect key="frame" x="5" y="216" width="227" height="21"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="21" id="wXL-HF-sey"/>
-                        </constraints>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombre" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="woy-OK-Udt">
+                        <rect key="frame" x="5" y="215" width="230" height="38.5"/>
                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -64,8 +61,8 @@
                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gratis radiografía panorámica de la boca!, con la primera visita Premium" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w1P-ny-IRv">
-                        <rect key="frame" x="5" y="242" width="227" height="48"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="252" text="Gratis radiografía panorámica de la boca!, con la primera visita Premium" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w1P-ny-IRv">
+                        <rect key="frame" x="5" y="258.5" width="227" height="31.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -86,25 +83,25 @@
                     </view>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="woy-OK-Udt" firstAttribute="top" secondItem="Zzm-Zx-WR9" secondAttribute="bottom" constant="6" id="4Ay-RM-LWf"/>
                     <constraint firstItem="C5e-YI-BWn" firstAttribute="top" secondItem="Zzm-Zx-WR9" secondAttribute="bottom" constant="6" id="4kX-cF-peh"/>
-                    <constraint firstItem="w1P-ny-IRv" firstAttribute="top" secondItem="woy-OK-Udt" secondAttribute="bottom" constant="5" id="6S7-Lz-xwh"/>
+                    <constraint firstItem="woy-OK-Udt" firstAttribute="top" secondItem="Zzm-Zx-WR9" secondAttribute="bottom" constant="5" id="7DG-gI-Jpc"/>
                     <constraint firstItem="2f5-aM-SQP" firstAttribute="leading" secondItem="w1P-ny-IRv" secondAttribute="trailing" constant="8" id="7w7-tR-eak"/>
+                    <constraint firstItem="woy-OK-Udt" firstAttribute="leading" secondItem="nLK-Pe-zgv" secondAttribute="leading" constant="5" id="Cdv-0U-SUW"/>
                     <constraint firstAttribute="bottom" secondItem="ddS-Rk-7J6" secondAttribute="bottom" id="E95-VD-DjA"/>
-                    <constraint firstItem="C5e-YI-BWn" firstAttribute="leading" secondItem="woy-OK-Udt" secondAttribute="trailing" constant="8" id="FNX-H3-26b"/>
                     <constraint firstAttribute="trailing" secondItem="ddS-Rk-7J6" secondAttribute="trailing" id="Fh1-Z0-8iH"/>
                     <constraint firstAttribute="trailing" secondItem="Hi3-Ba-x3C" secondAttribute="trailing" constant="7" id="Fkk-8G-3mp"/>
                     <constraint firstAttribute="trailing" secondItem="KHv-hM-eS6" secondAttribute="trailing" id="H26-Gb-BJd"/>
                     <constraint firstItem="Zzm-Zx-WR9" firstAttribute="top" secondItem="nLK-Pe-zgv" secondAttribute="top" id="UKi-qQ-Q08"/>
                     <constraint firstItem="Zzm-Zx-WR9" firstAttribute="leading" secondItem="nLK-Pe-zgv" secondAttribute="leading" id="UPR-7w-7Fp"/>
                     <constraint firstItem="ddS-Rk-7J6" firstAttribute="top" secondItem="KHv-hM-eS6" secondAttribute="bottom" id="WCs-1Y-6d3"/>
+                    <constraint firstItem="w1P-ny-IRv" firstAttribute="top" secondItem="woy-OK-Udt" secondAttribute="bottom" constant="5" id="Xun-4N-VHu"/>
                     <constraint firstItem="KHv-hM-eS6" firstAttribute="top" secondItem="Hi3-Ba-x3C" secondAttribute="bottom" constant="12" id="Ya5-mH-jSf"/>
                     <constraint firstItem="ddS-Rk-7J6" firstAttribute="leading" secondItem="nLK-Pe-zgv" secondAttribute="leading" id="Z4c-gJ-ksb"/>
                     <constraint firstAttribute="trailing" secondItem="Zzm-Zx-WR9" secondAttribute="trailing" id="fKJ-gm-0AV"/>
                     <constraint firstAttribute="trailing" secondItem="C5e-YI-BWn" secondAttribute="trailing" constant="8" id="fdW-jL-va8"/>
                     <constraint firstItem="KHv-hM-eS6" firstAttribute="top" secondItem="2f5-aM-SQP" secondAttribute="bottom" constant="12" id="kZE-57-eNt"/>
                     <constraint firstItem="w1P-ny-IRv" firstAttribute="leading" secondItem="nLK-Pe-zgv" secondAttribute="leading" constant="5" id="nBF-gQ-iWu"/>
-                    <constraint firstItem="woy-OK-Udt" firstAttribute="leading" secondItem="nLK-Pe-zgv" secondAttribute="leading" constant="5" id="qv2-au-ZTd"/>
+                    <constraint firstItem="C5e-YI-BWn" firstAttribute="leading" secondItem="woy-OK-Udt" secondAttribute="trailing" constant="5" id="rSh-tW-9HI"/>
                     <constraint firstItem="KHv-hM-eS6" firstAttribute="leading" secondItem="nLK-Pe-zgv" secondAttribute="leading" id="uB4-fC-tdI"/>
                     <constraint firstItem="Hi3-Ba-x3C" firstAttribute="leading" secondItem="2f5-aM-SQP" secondAttribute="trailing" id="xom-vz-usb"/>
                     <constraint firstItem="KHv-hM-eS6" firstAttribute="top" secondItem="w1P-ny-IRv" secondAttribute="bottom" constant="8" id="yLk-2x-Ov4"/>

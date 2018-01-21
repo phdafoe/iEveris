@@ -33,13 +33,9 @@ class CuponesTableViewController: UITableViewController {
         tableView.register(UINib(nibName: GenericTableViewCell.defaultReuseIdentifier, bundle: nil), forCellReuseIdentifier: GenericTableViewCell.defaultReuseIdentifier)
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+   
 
     // MARK: - Table view data source
-
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
@@ -77,28 +73,14 @@ class CuponesTableViewController: UITableViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
         if segue.identifier == "showCuponesSegue"{
-            
             let detalleVC = segue.destination as! DetalleGenericoTableViewController
             let selectInd = tableView.indexPathForSelectedRow?.row
             let objInd = arrayGenerico[selectInd!]
-            
             //Asignar la oferta seleccionada
             detalleVC.oferta = objInd
-            
             //Recuperar la imagen de la lista local
             detalleVC.detalleImagenData = diccionarioImagenes[objInd.id!]!
-            
-            /*detalleVC.oferta = objInd
-             do{
-             let imageData = UIImage(data: try Data(contentsOf: URL(string: CONSTANTES.LLAMADAS.BASE_PHOTO_URL + (objInd.id)! + "/" + (objInd.imagen)!)!))
-             detalleVC.detalleImagenData = imageData!
-             }catch let error{
-             print("Error: \(error.localizedDescription)")
-             }*/
-            
-            
         }
     }
     
@@ -109,9 +91,7 @@ class CuponesTableViewController: UITableViewController {
         let idLocalidad = "11"
         let tipoOferta = CONSTANTES.LLAMADAS.CUPONES
         let tipoParametro = CONSTANTES.LLAMADAS.PROMOCIONES_SERVICE
-        
         APESuperHUD.showOrUpdateHUD(loadingIndicator: .standard, message: "Cargando", presentingView: self.view)
-        
         firstly{
             return when(resolved: datosOfertas.getDatosGenerico(idLocalidad,
                                                                 idTipo: tipoOferta,
