@@ -14,9 +14,12 @@ class MuroTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        tableView.estimatedRowHeight = 60
+        tableView.rowHeight = UITableViewAutomaticDimension
+        
         //TODO: - Registro de celda //ISPostCustomCell
-        tableView.register(UINib(nibName: "MiPerfilCustomCell", bundle: nil), forCellReuseIdentifier: "MiPerfilCustomCell")
-        tableView.register(UINib(nibName: "GenericTableViewCell", bundle: nil), forCellReuseIdentifier: "GenericTableViewCell")
+        tableView.register(UINib(nibName: MiPerfilCustomCell.defaultReuseIdentifier, bundle: nil), forCellReuseIdentifier: MiPerfilCustomCell.defaultReuseIdentifier)
+        tableView.register(UINib(nibName: GenericTableViewCell.defaultReuseIdentifier, bundle: nil), forCellReuseIdentifier: GenericTableViewCell.defaultReuseIdentifier)
         
     }
     
@@ -53,26 +56,12 @@ class MuroTableViewController: UITableViewController {
         
         switch indexPath.section{
         case 0:
-            let customPerfilCell = tableView.dequeueReusableCell(withIdentifier: "MiPerfilCustomCell", for: indexPath) as! MiPerfilCustomCell
-            
-            //nombre y apellido
-            customPerfilCell.myNombrePerfilUsuario.text = "Andres"
-            customPerfilCell.myUsernameSportReviewLBL.text = "Ocampo"
-            
-            customPerfilCell.myBotonAjustesPerfilUsuario.tag = indexPath.row
-           /* customPerfilCell.myBotonAjustesPerfilUsuario.addTarget(self,
-                                                                   action: #selector(muestraVCConfiguration),
-                                                                   for: .touchUpInside)*/
-            customPerfilCell.myFotoPerfilUsuario.image = UIImage(named: "steve_jobs")
-            customPerfilCell.myUsuarioGenerales.tag = indexPath.row
-            /*customPerfilCell.myUsuarioGenerales.addTarget(self,
-                                                          action: #selector(muestraTablaUsuarios),
-                                                          for: .touchUpInside)*/
-            
+            let customCell = tableView.dequeueReusableCell(withIdentifier: MiPerfilCustomCell.defaultReuseIdentifier, for: indexPath) as! MiPerfilCustomCell
+            let customPerfilCell = EVERISRellenarCeldas().tipoGenericoPerfil(customCell)
             return customPerfilCell
         default:
             
-            let postCustomCell = tableView.dequeueReusableCell(withIdentifier: "GenericTableViewCell", for: indexPath) as! GenericTableViewCell
+            let postCustomCell = tableView.dequeueReusableCell(withIdentifier: GenericTableViewCell.defaultReuseIdentifier, for: indexPath) as! GenericTableViewCell
             
             let arrayDescripcion = taskManager.descripcionPost[indexPath.row]
             let arrayFotoTareas = taskManager.fotoPost[indexPath.row]
@@ -95,14 +84,12 @@ class MuroTableViewController: UITableViewController {
         case 0:
             return 305
         default:
-            return 310
+             return UITableViewAutomaticDimension
         }
     }
     
+    override func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableViewAutomaticDimension
+    }
     
-    
-   
-    
-   
-
 }

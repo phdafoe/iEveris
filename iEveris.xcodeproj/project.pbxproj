@@ -34,6 +34,7 @@
 		4170C31A1FEEBE5D00A9F50A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4170C3181FEEBE5D00A9F50A /* Main.storyboard */; };
 		4170C31C1FEEBE5D00A9F50A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4170C31B1FEEBE5D00A9F50A /* Assets.xcassets */; };
 		4170C31F1FEEBE5D00A9F50A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4170C31D1FEEBE5D00A9F50A /* LaunchScreen.storyboard */; };
+		419A44C52014E7AE00F28DE7 /* ReuseIdentifierProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419A44C42014E7AE00F28DE7 /* ReuseIdentifierProtocol.swift */; };
 		E93A508BE3551F7E2422941B /* Pods_iEveris.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33D4B3610F85304C9DBC0217 /* Pods_iEveris.framework */; };
 /* End PBXBuildFile section */
 
@@ -69,6 +70,7 @@
 		4170C31B1FEEBE5D00A9F50A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4170C31E1FEEBE5D00A9F50A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4170C3201FEEBE5D00A9F50A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		419A44C42014E7AE00F28DE7 /* ReuseIdentifierProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReuseIdentifierProtocol.swift; sourceTree = "<group>"; };
 		FAEE951A4EB1F538E448975D /* Pods-iEveris.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iEveris.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iEveris/Pods-iEveris.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -152,6 +154,7 @@
 				4100ADB11FF1424B00565366 /* GenericTableViewCell.xib */,
 				4136EC331FF94B0F00192384 /* MiPerfilCustomCell.swift */,
 				4136EC321FF94B0F00192384 /* MiPerfilCustomCell.xib */,
+				419A44C42014E7AE00F28DE7 /* ReuseIdentifierProtocol.swift */,
 			);
 			path = GENERIC_CELL;
 			sourceTree = "<group>";
@@ -355,6 +358,7 @@
 				4100AD9C1FF13B2C00565366 /* API_UTILS.swift in Sources */,
 				4100ADAB1FF1418700565366 /* MuroTableViewController.swift in Sources */,
 				4100ADA31FF1413800565366 /* ConcursosTableViewController.swift in Sources */,
+				419A44C52014E7AE00F28DE7 /* ReuseIdentifierProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

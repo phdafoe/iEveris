@@ -25,9 +25,12 @@ class OfertasTableViewController: UITableViewController {
         
         //LLAMADA A DATOS
         llamadaGenerica()
+        
+        tableView.estimatedRowHeight = 60
+        tableView.rowHeight = UITableViewAutomaticDimension
 
         //TODO: - Registro de celda
-        tableView.register(UINib(nibName: "GenericTableViewCell", bundle: nil), forCellReuseIdentifier: "GenericTableViewCell")
+        tableView.register(UINib(nibName: GenericTableViewCell.defaultReuseIdentifier, bundle: nil), forCellReuseIdentifier: GenericTableViewCell.defaultReuseIdentifier)
     }
 
     override func didReceiveMemoryWarning() {
@@ -50,7 +53,7 @@ class OfertasTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let modeldata = arrayGenerico[indexPath.row]
-        let customCell = tableView.dequeueReusableCell(withIdentifier: "GenericTableViewCell", for: indexPath) as! GenericTableViewCell
+        let customCell = tableView.dequeueReusableCell(withIdentifier: GenericTableViewCell.defaultReuseIdentifier, for: indexPath) as! GenericTableViewCell
         let cell = EVERISRellenarCeldas().tipoGenericoOfertas(customCell,
                                                               arrayGenerico: modeldata,
                                                               row: indexPath.row)
@@ -59,9 +62,13 @@ class OfertasTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 310
+        return UITableViewAutomaticDimension
     }
     
+    
+    override func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableViewAutomaticDimension
+    }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         imagenSeleccionada = customCellData?.myImagenOferta.image

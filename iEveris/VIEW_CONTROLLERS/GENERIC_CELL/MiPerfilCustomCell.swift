@@ -9,7 +9,7 @@
 
 import UIKit
 
-class MiPerfilCustomCell: UITableViewCell {
+class MiPerfilCustomCell: UITableViewCell, ReuseIdentifierProtocol {
     
     //MARK: - IBOUTLET
     

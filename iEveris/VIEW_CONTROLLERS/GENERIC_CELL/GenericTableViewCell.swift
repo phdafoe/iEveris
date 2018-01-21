@@ -8,7 +8,7 @@
 
 import UIKit
 
-class GenericTableViewCell: UITableViewCell {
+class GenericTableViewCell: UITableViewCell, ReuseIdentifierProtocol {
     
     //MARK:- IBOutlets
     @IBOutlet weak var myImagenOferta: UIImageView!

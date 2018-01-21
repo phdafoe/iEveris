@@ -19,12 +19,8 @@ public class EVERISRellenarCeldas{
         customCell.myInformacionOferta.text = arrayGenerico.masInformacion
         customCell.myImporteOferta.text = arrayGenerico.importe
         
-        //Recuperar en background la imagen
         if var pathImagen = arrayGenerico.imagen {
-            
             pathImagen = CONSTANTES.LLAMADAS.BASE_URL + pathImagen
-            
-            
             let pathComplete = getImagePath(CONSTANTES.LLAMADAS.OFERTAS, id: arrayGenerico.id!, name: arrayGenerico.imagen!)
             customCell.myImagenOferta.kf.setImage(with: ImageResource(downloadURL: URL(string: pathComplete)!),
                                                   placeholder: #imageLiteral(resourceName: "placeholder"),
@@ -37,6 +33,14 @@ public class EVERISRellenarCeldas{
         }
         return customCell
     }
+    
+    func tipoGenericoPerfil(_ customCell : MiPerfilCustomCell) -> MiPerfilCustomCell{
+        customCell.myNombrePerfilUsuario.text = "Andres"
+        customCell.myUsernameSportReviewLBL.text = "Ocampo"
+        customCell.myFotoPerfilUsuario.image = #imageLiteral(resourceName: "steve_jobs")
+        return customCell
+    }
+    
     
 }
 

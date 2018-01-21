@@ -16,18 +16,23 @@ class HomeNavigationViewController: UINavigationController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let iphoneSize = UIScreen.main.bounds.height
+        
         botonFlotante.frame = CGRect(origin: CGPoint.zero, size: CGSize(width: 64.0, height: 64.0))
         botonFlotante.setImage(UIImage(named: "boton_Menu_MiPerfil"), for: UIControlState())
-        botonFlotante.center = CGPoint(x: self.view.bounds.width - 42.0, y: self.view.bounds.height - 100.0)
+        
+        if iphoneSize == 812{
+            botonFlotante.center = CGPoint(x: self.view.bounds.width - 42.0, y: self.view.bounds.height - 150.0)
+        }else{
+            botonFlotante.center = CGPoint(x: self.view.bounds.width - 42.0, y: self.view.bounds.height - 100.0)
+        }
         botonFlotante.addTarget(self, action: #selector(self.showVCNuevoComentario), for: .touchUpInside)
         self.view.addSubview(botonFlotante)
 
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
 
