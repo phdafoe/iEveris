@@ -27,7 +27,10 @@ func muestraAlertVC(_ titleData : String, messageData : String) -> UIAlertContro
     return alert
 }
 
-//MARK: - ENVIO DE CORREO DE CONTACTO
+
+/// configuredMailComposeViewController()
+///
+/// - Returns:  MFMailComposeViewController
 func configuredMailComposeViewController() -> MFMailComposeViewController{
     let mailCompose = MFMailComposeViewController()
     mailCompose.setToRecipients(["info@info.com"])
@@ -36,7 +39,13 @@ func configuredMailComposeViewController() -> MFMailComposeViewController{
     return mailCompose
 }
 
-//MARK: - NULL TO String
+
+/// public func dimeString()
+///
+/// - Parameters:
+///   - j: j : JSON
+///   - nombre: nombre : String
+/// - Returns: String
 public func dimeString(_ j : JSON, nombre : String) -> String{
     if let stringResult = j[nombre].string{
         return stringResult

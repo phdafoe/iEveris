@@ -21,8 +21,6 @@ class OfertasTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //self.title = "OFERTAS"
-        
         //LLAMADA A DATOS
         llamadaGenerica()
         
@@ -73,9 +71,7 @@ class OfertasTableViewController: UITableViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
         if segue.identifier == "showOfertaSegue"{
-            
             let detalleVC = segue.destination as! DetalleGenericoTableViewController
             let selectInd = tableView.indexPathForSelectedRow?.row
             let objInd = arrayGenerico[selectInd!]
