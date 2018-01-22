@@ -20,7 +20,7 @@ class CuponesTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.title = "CUPONES"
+        //self.title = "CUPONES"
         
         tableView.estimatedRowHeight = 60
         tableView.rowHeight = UITableViewAutomaticDimension
@@ -49,9 +49,9 @@ class CuponesTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let modeldata = arrayGenerico[indexPath.row]
         let customCell = tableView.dequeueReusableCell(withIdentifier: GenericTableViewCell.defaultReuseIdentifier, for: indexPath) as! GenericTableViewCell
-        let cell = EVERISRellenarCeldas().tipoGenericoOfertas(customCell,
-                                                              arrayGenerico: modeldata,
-                                                              row: indexPath.row)
+        let cell = EVERISRellenarCeldas().tipoGenerico(customCell,
+                                                       arrayGenerico: modeldata,
+                                                       row: indexPath.row)
         customCellData = cell
         return cell
     }
@@ -78,7 +78,7 @@ class CuponesTableViewController: UITableViewController {
             let selectInd = tableView.indexPathForSelectedRow?.row
             let objInd = arrayGenerico[selectInd!]
             //Asignar la oferta seleccionada
-            detalleVC.oferta = objInd
+            detalleVC.movie = objInd
             //Recuperar la imagen de la lista local
             detalleVC.detalleImagenData = diccionarioImagenes[objInd.id!]!
         }
@@ -86,16 +86,11 @@ class CuponesTableViewController: UITableViewController {
     
     //MARK: - UTILS
     func llamadaGenerica(){
-        
         let datosOfertas = ParserGenerico()
-        let idLocalidad = "11"
-        let tipoOferta = CONSTANTES.LLAMADAS.CUPONES
-        let tipoParametro = CONSTANTES.LLAMADAS.PROMOCIONES_SERVICE
+        var idName = "toppaidebooks"
         APESuperHUD.showOrUpdateHUD(loadingIndicator: .standard, message: "Cargando", presentingView: self.view)
         firstly{
-            return when(resolved: datosOfertas.getDatosGenerico(idLocalidad,
-                                                                idTipo: tipoOferta,
-                                                                idParametro: tipoParametro))
+            return when(resolved: datosOfertas.getDatosGenerico(idName))
             }.then{_ in
                 self.arrayGenerico = datosOfertas.getParserGenerico()
             }.then{_ in

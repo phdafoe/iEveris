@@ -12,23 +12,22 @@ import Kingfisher
 public class EVERISRellenarCeldas{
     
     
-    func tipoGenericoOfertas(_ customCell : GenericTableViewCell, arrayGenerico : GenericModelData, row : Int) -> GenericTableViewCell {
+    func tipoGenerico(_ customCell : GenericTableViewCell, arrayGenerico : GenericModelData, row : Int) -> GenericTableViewCell {
         
-        customCell.myNombreOferta.text = arrayGenerico.nombre
-        customCell.myFechaOferta.text = arrayGenerico.fechaFin
-        customCell.myInformacionOferta.text = arrayGenerico.masInformacion
-        customCell.myImporteOferta.text = arrayGenerico.importe
+        customCell.myNombreOferta.text = arrayGenerico.title
+        customCell.myFechaOferta.text = arrayGenerico.releaseDate
+        customCell.myInformacionOferta.text = arrayGenerico.summary
+        customCell.myImporteOferta.text = arrayGenerico.rentalPrice
         
-        if var pathImagen = arrayGenerico.imagen {
-            pathImagen = CONSTANTES.LLAMADAS.BASE_URL + pathImagen
-            let pathComplete = getImagePath(CONSTANTES.LLAMADAS.OFERTAS, id: arrayGenerico.id!, name: arrayGenerico.imagen!)
-            customCell.myImagenOferta.kf.setImage(with: ImageResource(downloadURL: URL(string: pathComplete)!),
+        if let pathImagen = arrayGenerico.image {
+            customCell.myImagenOferta.kf.setImage(with: ImageResource(downloadURL: URL(string: pathImagen)!),
                                                   placeholder: #imageLiteral(resourceName: "placeholder"),
                                                   options: [.transition(ImageTransition.fade(1))],
                                                   progressBlock: nil,
                                                   completionHandler: { (imageData, error, cacheType, imageUrl) in
                                                     //guardamos las imágenes en un diccionario
-                                                    diccionarioImagenes[arrayGenerico.id!] = imageData!
+                                                    guard let imageDataDes = imageData else {return}
+                                                    diccionarioImagenes[arrayGenerico.id!] = imageDataDes
             })
         }
         return customCell

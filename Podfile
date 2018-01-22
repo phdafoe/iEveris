@@ -11,5 +11,6 @@ target 'iEveris' do
     pod 'Kingfisher'
     pod 'PromiseKit/Alamofire'
     pod 'APESuperHUD', :git => 'https://github.com/apegroup/APESuperHUD.git'
+    pod "GSKStretchyHeaderView"
     
 end

@@ -11,58 +11,25 @@ import UIKit
 class GenericModelData: NSObject {
     
     var id : String?
-    var tipoPromocion : String?
-    var nombre : String?
-    var importe : String?
-    var imagen : String?
-    var fechaFin : String?
-    var masInformacion : String?
-    var asociado : AsociadoModel?
+    var title : String?
+    var summary : String?
+    var image : String?
+    var category : String?
+    var director : String?
+    var releaseDate : String?
+    var rentalPrice : String?
+    var link : String?
     
-    init(pId : String, pTipoPromocion : String, pNombre : String, pImporte : String, pImagen : String, pFechaFin : String, pMasInformacion : String, pAsociado : AsociadoModel) {
-        
+    init(pId : String, pTitle : String, pSummary : String, pImage : String, pCategory : String, pDirector : String, pReleaseDate : String, pRentalPrice : String, pLink : String) {
         self.id = pId
-        self.tipoPromocion = pTipoPromocion
-        self.nombre = pNombre
-        self.importe = pImporte
-        self.imagen = pImagen
-        self.fechaFin = pFechaFin
-        self.masInformacion = pMasInformacion
-        self.asociado = pAsociado
-        super.init()
+        self.title = pTitle
+        self.summary = pSummary
+        self.image = pImage
+        self.category = pCategory
+        self.director = pDirector
+        self.releaseDate = pReleaseDate
+        self.rentalPrice = pReleaseDate
+        self.link = pLink
     }
-    
 }
 
-class AsociadoModel: NSObject {
-    var id : String?
-    var nombre : String?
-    var descripcion : String?
-    var condicionesEspeciales : String?
-    var direccion : String?
-    var idActividad : String?
-    var idLocalidad : String?
-    var imagen : String?
-    var telefonoFijo : String?
-    var telefonoMovil : String?
-    var mail : String?
-    var web : String?
-    
-    
-    init(pId : String, pNombre : String, pDescripcion : String, pCondicionesEspeciales : String, pDireccion : String, pIdActividad : String, pIdLocalidad : String, pImagen : String, pTelefonoFijo : String, pTelefonoMovil : String, pMail : String, pWeb : String) {
-        
-        self.id = pId
-        self.nombre = pNombre
-        self.descripcion = pDescripcion
-        self.condicionesEspeciales = pCondicionesEspeciales
-        self.direccion = pDireccion
-        self.idActividad = pIdActividad
-        self.idLocalidad = pIdLocalidad
-        self.imagen = pImagen
-        self.telefonoFijo = pTelefonoFijo
-        self.telefonoMovil = pTelefonoMovil
-        self.mail = pMail
-        self.web = pWeb
-        super.init()
-    }
-}

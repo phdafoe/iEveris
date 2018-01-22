@@ -12,7 +12,7 @@ import MapKit
 class DetalleGenericoTableViewController: UITableViewController {
     
     //MARK: - Variables locales
-    var oferta : GenericModelData?
+    var movie : GenericModelData?
     var detalleImagenData : UIImage?
     
     //MARK: - IBOutlets
@@ -28,6 +28,8 @@ class DetalleGenericoTableViewController: UITableViewController {
     @IBOutlet weak var myMapView: MKMapView!
     @IBOutlet weak var myTelefonoFijo: UIButton!
     @IBOutlet weak var myWebURL: UIButton!
+    @IBOutlet weak var myImageBackground: UIImageView!
+    
     
     @IBAction func myLlamarFijoACTION(_ sender: UIButton) {
         //Recuperar el teléfono
@@ -51,18 +53,19 @@ class DetalleGenericoTableViewController: UITableViewController {
         tableView.estimatedRowHeight = 60
         tableView.rowHeight = UITableViewAutomaticDimension
         
-        if let ofertaDes = oferta, let AsociadoDes = oferta?.asociado{
+        if let movieDes = movie{
             
             myImagenOferta.image = detalleImagenData
-            myNombreOferta.text = ofertaDes.nombre
-            myFechaOferta.text = ofertaDes.fechaFin
-            myInformacionOferta.text = ofertaDes.masInformacion
-            myNombreAsociado.text = AsociadoDes.nombre
-            myDescripcionAsociado.text = AsociadoDes.descripcion
-            myMovilAsociado.text = AsociadoDes.telefonoMovil
-            myEmailAsociado.text = AsociadoDes.mail
-            myWebURL.setTitle(AsociadoDes.web, for: .normal)
-            myTelefonoFijo.setTitle(AsociadoDes.telefonoFijo, for: .normal)
+            myImageBackground.image = detalleImagenData
+            myNombreOferta.text = movieDes.title
+            myFechaOferta.text = movieDes.releaseDate
+            myInformacionOferta.text = movieDes.director
+            //myNombreAsociado.text = AsociadoDes.nombre
+            myDescripcionAsociado.text = movieDes.summary
+            myMovilAsociado.text = "663940573"
+            myEmailAsociado.text = "www.google.com"
+            myWebURL.setTitle(movieDes.link, for: .normal)
+            //myTelefonoFijo.setTitle(AsociadoDes.telefonoFijo, for: .normal)
             
         }
         let region = MKCoordinateRegion(center: CLLocationCoordinate2DMake(40.352494, -3.809620), span: MKCoordinateSpan(latitudeDelta: 0.001, longitudeDelta: 0.001))
@@ -70,8 +73,8 @@ class DetalleGenericoTableViewController: UITableViewController {
         
         let annotation = MKPointAnnotation()
         annotation.coordinate = CLLocationCoordinate2DMake(40.352494, -3.809620)
-        annotation.title = oferta?.nombre
-        annotation.subtitle = oferta?.asociado?.direccion
+        annotation.title = movie?.title
+        annotation.subtitle = movie?.title
         myMapView.addAnnotation(annotation)
     }
 

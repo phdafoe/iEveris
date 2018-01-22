@@ -13,11 +13,13 @@ import SwiftyJSON
 
 let customPrefs = UserDefaults.standard
 
-/**
- MUESTRA ALERT CONTROLLER GENERICO,
- + Parameter: titleData -> este titulo generico
- + Parameter: messageData -> este mensaje generico
-*/
+
+/// muestraAlertVC()
+///
+/// - Parameters:
+///   - titleData: titleData : String
+///   - messageData: messageData : String
+/// - Returns: UIAlertController
 func muestraAlertVC(_ titleData : String, messageData : String) -> UIAlertController{
     let alert = UIAlertController(title: titleData, message: messageData, preferredStyle: .alert)
     alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))

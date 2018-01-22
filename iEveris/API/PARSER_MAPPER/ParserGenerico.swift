@@ -12,47 +12,39 @@ import PromiseKit
 import Alamofire
 
 class ParserGenerico: NSObject {
-    
-    /*http://app.clubsinergias.es/api_comercios.php?idlocalidad=11&tipo=oferta&p=promociones
-     CONSTANTES.LLAMADAS.BASE_URL + CONSTANTES.LLAMADAS.BASEIDLOCALIDAD + idLocalidad + CONSTANTES.LLAMADAS.BASEIDTIPO + idTipo + CONSTANTES.LLAMADAS.BASEIDP + idParametro*/
-    //http://andresocampo.com/pruebas/iSaldos/concursos.json
-    
+        
     var jsonDataGenerico : JSON?
     
-    func getDatosGenerico(_ idLocalidad : String, idTipo : String, idParametro : String) -> Promise<JSON>{
-        let request = URLRequest(url: URL(string:  CONSTANTES.LLAMADAS.BASE_URL + CONSTANTES.LLAMADAS.BASEIDLOCALIDAD + idLocalidad + CONSTANTES.LLAMADAS.BASEIDTIPO + idTipo + CONSTANTES.LLAMADAS.BASEIDP + idParametro)!)
+    /// getDatosGenerico()
+    ///
+    /// - Parameter idName: idName : String
+    /// - Returns: Promise<JSON>
+    func getDatosGenerico(_ idName : String) -> Promise<JSON>{
+        let request = URLRequest(url: URL(string: CONSTANTES.LLAMADAS.BASE_ITUNES_TOP_MOVIES + idName + CONSTANTES.LLAMADAS.LASTPATH_COMPONENT)!)
+        print(request)
         return Alamofire.request(request).responseJSON().then{(data) -> JSON in
             self.jsonDataGenerico = JSON(data)
             return self.jsonDataGenerico!
         }
     }
     
+    /// getParserGenerico()
+    ///
+    /// - Returns: [GenericModelData]
     func getParserGenerico() -> [GenericModelData]{
-        var arrayPromocionesModel = [GenericModelData]()
-        for c_Promocion in (jsonDataGenerico?["promociones"])!{
-            let asociadoModel = AsociadoModel(pId: dimeString(c_Promocion.1["asociado"], nombre: "id"),
-                                                pNombre: dimeString(c_Promocion.1["asociado"], nombre: "nombre"),
-                                                pDescripcion: dimeString(c_Promocion.1["asociado"], nombre: "descripcion"),
-                                                pCondicionesEspeciales: dimeString(c_Promocion.1["asociado"], nombre: "condicionesEspeciales"),
-                                                pDireccion: dimeString(c_Promocion.1["asociado"], nombre: "direccion"),
-                                                pIdActividad: dimeString(c_Promocion.1["asociado"], nombre: "idActividad"),
-                                                pIdLocalidad: dimeString(c_Promocion.1["asociado"], nombre: "idLocalidad"),
-                                                pImagen: dimeString(c_Promocion.1["asociado"], nombre: "imagen"),
-                                                pTelefonoFijo: dimeString(c_Promocion.1["asociado"], nombre: "telefonoFijo"),
-                                                pTelefonoMovil: dimeString(c_Promocion.1["asociado"], nombre: "telefonoMovil"),
-                                                pMail: dimeString(c_Promocion.1["asociado"], nombre: "mail"),
-                                                pWeb: dimeString(c_Promocion.1["asociado"], nombre: "web"))
-            
-            let promocionesModel = GenericModelData(pId: dimeString(c_Promocion.1, nombre: "id"),
-                                                  pTipoPromocion: dimeString(c_Promocion.1, nombre: "tipoPromocion"),
-                                                  pNombre: dimeString(c_Promocion.1, nombre: "nombre"),
-                                                  pImporte: dimeString(c_Promocion.1, nombre: "importe"),
-                                                  pImagen: dimeString(c_Promocion.1, nombre: "imagen"),
-                                                  pFechaFin: dimeString(c_Promocion.1, nombre: "fechaFin"),
-                                                  pMasInformacion: dimeString(c_Promocion.1, nombre: "masInformacion"),
-                                                  pAsociado: asociadoModel)
-            arrayPromocionesModel.append(promocionesModel)
+        var arrayMovies = [GenericModelData]()
+        for c_movie in (jsonDataGenerico?["feed"]["entry"].arrayValue)!{
+            let modelData = GenericModelData(pId: dimeString(c_movie["id"]["attributes"], nombre: "im:id"),
+                                             pTitle: dimeString(c_movie["im:name"], nombre: "label"),
+                                             pSummary: dimeString(c_movie["summary"], nombre: "label"),
+                                             pImage: dimeString(c_movie["im:image"][2], nombre: "label".replacingOccurrences(of: "170x170", with: "600x600")),
+                                             pCategory: dimeString(c_movie["category"]["attributes"], nombre: "label"),
+                                             pDirector: dimeString(c_movie["im:artist"], nombre: "label"),
+                                             pReleaseDate: dimeString(c_movie["im:releaseDate"]["attributes"], nombre: "label"),
+                                             pRentalPrice: dimeString(c_movie["im:price"], nombre: "label"),
+                                             pLink: dimeString(c_movie["link"][0]["attributes"], nombre: "href"))
+            arrayMovies.append(modelData)
         }
-        return arrayPromocionesModel
+        return arrayMovies
     }
 }
