@@ -63,9 +63,9 @@ class DetalleGenericoTableViewController: UITableViewController {
             //myNombreAsociado.text = AsociadoDes.nombre
             myDescripcionAsociado.text = movieDes.summary
             myMovilAsociado.text = "663940573"
-            myEmailAsociado.text = "www.google.com"
-            myWebURL.setTitle(movieDes.link, for: .normal)
-            //myTelefonoFijo.setTitle(AsociadoDes.telefonoFijo, for: .normal)
+            myEmailAsociado.text = "mail@mail.com"
+            myWebURL.setTitle("www.andresocampo.com", for: .normal)
+            myTelefonoFijo.setTitle("663940573", for: .normal)
             
         }
         let region = MKCoordinateRegion(center: CLLocationCoordinate2DMake(40.352494, -3.809620), span: MKCoordinateSpan(latitudeDelta: 0.001, longitudeDelta: 0.001))

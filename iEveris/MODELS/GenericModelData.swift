@@ -28,7 +28,7 @@ class GenericModelData: NSObject {
         self.category = pCategory
         self.director = pDirector
         self.releaseDate = pReleaseDate
-        self.rentalPrice = pReleaseDate
+        self.rentalPrice = pRentalPrice
         self.link = pLink
     }
 }

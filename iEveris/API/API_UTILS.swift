@@ -17,6 +17,7 @@ typealias arrayDiccionario = [diccionario]
 var imagenSeleccionada : UIImage?
 var diccionarioImagenes = [String: UIImage?]()
 
+
 struct Constantes {
     let COLORES = Colores()
     let LLAMADAS = LLamadas()
@@ -50,6 +51,7 @@ struct LLamadas {
     let BASE_URL_CONCURSOS = "http://andresocampo.com/pruebas/iSaldos/concursos.json"
     let BASE_URL_CUPONES = "http://andresocampo.com/pruebas/iSaldos/cupones.json"
     let BASE_URL_OFERTAS = "http://andresocampo.com/pruebas/iSaldos/ofertas.json"
+    
     
     let BASE_ITUNES_TOP_MOVIES = "https://itunes.apple.com/us/rss/"
     let LASTPATH_COMPONENT = "/limit=50/json"

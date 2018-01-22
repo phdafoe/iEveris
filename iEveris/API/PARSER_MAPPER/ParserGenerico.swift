@@ -37,7 +37,7 @@ class ParserGenerico: NSObject {
             let modelData = GenericModelData(pId: dimeString(c_movie["id"]["attributes"], nombre: "im:id"),
                                              pTitle: dimeString(c_movie["im:name"], nombre: "label"),
                                              pSummary: dimeString(c_movie["summary"], nombre: "label"),
-                                             pImage: dimeString(c_movie["im:image"][2], nombre: "label".replacingOccurrences(of: "170x170", with: "600x600")),
+                                             pImage: dimeString(c_movie["im:image"][2], nombre: "label".replacingOccurrences(of: "170x170", with: "700x700")),
                                              pCategory: dimeString(c_movie["category"]["attributes"], nombre: "label"),
                                              pDirector: dimeString(c_movie["im:artist"], nombre: "label"),
                                              pReleaseDate: dimeString(c_movie["im:releaseDate"]["attributes"], nombre: "label"),
