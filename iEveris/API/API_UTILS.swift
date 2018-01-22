@@ -53,7 +53,7 @@ struct LLamadas {
     let BASE_URL_OFERTAS = "http://andresocampo.com/pruebas/iSaldos/ofertas.json"
     
     
-    let BASE_ITUNES_TOP_MOVIES = "https://itunes.apple.com/us/rss/"
+    let BASE_ITUNES_TOP = "https://itunes.apple.com/us/rss/"
     let LASTPATH_COMPONENT = "/limit=50/json"
     
     

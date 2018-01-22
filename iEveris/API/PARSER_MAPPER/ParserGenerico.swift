@@ -20,7 +20,7 @@ class ParserGenerico: NSObject {
     /// - Parameter idName: idName : String
     /// - Returns: Promise<JSON>
     func getDatosGenerico(_ idName : String) -> Promise<JSON>{
-        let request = URLRequest(url: URL(string: CONSTANTES.LLAMADAS.BASE_ITUNES_TOP_MOVIES + idName + CONSTANTES.LLAMADAS.LASTPATH_COMPONENT)!)
+        let request = URLRequest(url: URL(string: CONSTANTES.LLAMADAS.BASE_ITUNES_TOP + idName + CONSTANTES.LLAMADAS.LASTPATH_COMPONENT)!)
         print(request)
         return Alamofire.request(request).responseJSON().then{(data) -> JSON in
             self.jsonDataGenerico = JSON(data)
