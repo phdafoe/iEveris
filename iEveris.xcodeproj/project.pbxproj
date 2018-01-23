@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		4100AD9C1FF13B2C00565366 /* API_UTILS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4100AD9B1FF13B2C00565366 /* API_UTILS.swift */; };
 		4100AD9E1FF13C4800565366 /* API_HELPERS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4100AD9D1FF13C4800565366 /* API_HELPERS.swift */; };
-		4100ADA11FF1412300565366 /* OfertasTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4100ADA01FF1412300565366 /* OfertasTableViewController.swift */; };
 		4100ADA31FF1413800565366 /* ConcursosTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4100ADA21FF1413800565366 /* ConcursosTableViewController.swift */; };
 		4100ADA51FF1414300565366 /* CuponesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4100ADA41FF1414300565366 /* CuponesTableViewController.swift */; };
 		4100ADA71FF1415400565366 /* DetalleGenericoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4100ADA61FF1415400565366 /* DetalleGenericoTableViewController.swift */; };
@@ -35,6 +34,8 @@
 		4170C31C1FEEBE5D00A9F50A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4170C31B1FEEBE5D00A9F50A /* Assets.xcassets */; };
 		4170C31F1FEEBE5D00A9F50A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4170C31D1FEEBE5D00A9F50A /* LaunchScreen.storyboard */; };
 		419A44C52014E7AE00F28DE7 /* ReuseIdentifierProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419A44C42014E7AE00F28DE7 /* ReuseIdentifierProtocol.swift */; };
+		B48272962017AAC200435AD9 /* GenericCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48272952017AAC200435AD9 /* GenericCollectionViewCell.swift */; };
+		B48272982017AB5300435AD9 /* PeliculasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48272972017AB5300435AD9 /* PeliculasViewController.swift */; };
 		E93A508BE3551F7E2422941B /* Pods_iEveris.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33D4B3610F85304C9DBC0217 /* Pods_iEveris.framework */; };
 /* End PBXBuildFile section */
 
@@ -43,7 +44,6 @@
 		33D4B3610F85304C9DBC0217 /* Pods_iEveris.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iEveris.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4100AD9B1FF13B2C00565366 /* API_UTILS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API_UTILS.swift; sourceTree = "<group>"; };
 		4100AD9D1FF13C4800565366 /* API_HELPERS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API_HELPERS.swift; sourceTree = "<group>"; };
-		4100ADA01FF1412300565366 /* OfertasTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfertasTableViewController.swift; sourceTree = "<group>"; };
 		4100ADA21FF1413800565366 /* ConcursosTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcursosTableViewController.swift; sourceTree = "<group>"; };
 		4100ADA41FF1414300565366 /* CuponesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CuponesTableViewController.swift; sourceTree = "<group>"; };
 		4100ADA61FF1415400565366 /* DetalleGenericoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalleGenericoTableViewController.swift; sourceTree = "<group>"; };
@@ -71,6 +71,8 @@
 		4170C31E1FEEBE5D00A9F50A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4170C3201FEEBE5D00A9F50A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		419A44C42014E7AE00F28DE7 /* ReuseIdentifierProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReuseIdentifierProtocol.swift; sourceTree = "<group>"; };
+		B48272952017AAC200435AD9 /* GenericCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericCollectionViewCell.swift; sourceTree = "<group>"; };
+		B48272972017AB5300435AD9 /* PeliculasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeliculasViewController.swift; sourceTree = "<group>"; };
 		FAEE951A4EB1F538E448975D /* Pods-iEveris.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iEveris.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iEveris/Pods-iEveris.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -127,7 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				4100ADAF1FF1421800565366 /* GENERIC_CELL */,
-				4100ADA01FF1412300565366 /* OfertasTableViewController.swift */,
+				B48272972017AB5300435AD9 /* PeliculasViewController.swift */,
 				4100ADA21FF1413800565366 /* ConcursosTableViewController.swift */,
 				4100ADA41FF1414300565366 /* CuponesTableViewController.swift */,
 				4100ADA61FF1415400565366 /* DetalleGenericoTableViewController.swift */,
@@ -155,6 +157,7 @@
 				4136EC331FF94B0F00192384 /* MiPerfilCustomCell.swift */,
 				4136EC321FF94B0F00192384 /* MiPerfilCustomCell.xib */,
 				419A44C42014E7AE00F28DE7 /* ReuseIdentifierProtocol.swift */,
+				B48272952017AAC200435AD9 /* GenericCollectionViewCell.swift */,
 			);
 			path = GENERIC_CELL;
 			sourceTree = "<group>";
@@ -343,10 +346,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4100ADA11FF1412300565366 /* OfertasTableViewController.swift in Sources */,
 				4100AD9E1FF13C4800565366 /* API_HELPERS.swift in Sources */,
 				4100ADA71FF1415400565366 /* DetalleGenericoTableViewController.swift in Sources */,
+				B48272962017AAC200435AD9 /* GenericCollectionViewCell.swift in Sources */,
 				41227F5E1FF8EAEA0022FD6E /* APITaskManager.swift in Sources */,
+				B48272982017AB5300435AD9 /* PeliculasViewController.swift in Sources */,
 				4100ADAD1FF141A300565366 /* HerramientaPostMuroTableViewController.swift in Sources */,
 				4100ADA91FF1416900565366 /* WebGenericoViewController.swift in Sources */,
 				4100ADB51FF143CD00565366 /* GenericModelData.swift in Sources */,

@@ -8,12 +8,17 @@
 
 import UIKit
 import MapKit
+import PromiseKit
+import Kingfisher
+import APESuperHUD
 
 class DetalleGenericoTableViewController: UITableViewController {
     
     //MARK: - Variables locales
     var movie : GenericModelData?
     var detalleImagenData : UIImage?
+    //MARK: - Variables locales
+    var arrayGenerico : [GenericModelData] = []
     
     //MARK: - IBOutlets
     @IBOutlet weak var myImagenOferta: UIImageView!
@@ -29,7 +34,7 @@ class DetalleGenericoTableViewController: UITableViewController {
     @IBOutlet weak var myTelefonoFijo: UIButton!
     @IBOutlet weak var myWebURL: UIButton!
     @IBOutlet weak var myImageBackground: UIImageView!
-    
+    @IBOutlet weak var myCollectionView: UICollectionView!
     
     @IBAction func myLlamarFijoACTION(_ sender: UIButton) {
         //Recuperar el teléfono
@@ -49,12 +54,20 @@ class DetalleGenericoTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+       
+        
+        //LLAMADA A DATOS
+        llamadaGenerica()
+        
+        myCollectionView.delegate = self
+        myCollectionView.dataSource = self
 
         tableView.estimatedRowHeight = 60
         tableView.rowHeight = UITableViewAutomaticDimension
         
         if let movieDes = movie{
-            
+            self.title = movieDes.title
             myImagenOferta.image = detalleImagenData
             myImageBackground.image = detalleImagenData
             myNombreOferta.text = movieDes.title
@@ -103,15 +116,6 @@ class DetalleGenericoTableViewController: UITableViewController {
         }
     }
     
-    ///Permite llamar a un número de teléfono
-    func accederURL(_ web : String){
-        if let webURL = URL(string: "\(web)") {
-            let application:UIApplication = UIApplication.shared
-            if (application.canOpenURL(webURL)) {
-                application.open(webURL, options: [:], completionHandler: nil)
-            }
-        }
-    }
     
     ///Mostrar un viewcontroller con una web
     func muestraPaginaWebAsociado(_ url: String){
@@ -119,5 +123,54 @@ class DetalleGenericoTableViewController: UITableViewController {
         webVC.urlWeb = url
         present(webVC, animated: true, completion: nil)
     }
+    
+    
+    //MARK: - UTILS
+    func llamadaGenerica(){
+        
+        let datosOfertas = ParserGenerico()
+        let idName = "toppaidebooks"
+        APESuperHUD.showOrUpdateHUD(loadingIndicator: .standard, message: "Cargando", presentingView: self.view)
+        firstly{
+            return when(resolved: datosOfertas.getDatosGenerico(idName))
+            }.then{_ in
+                self.arrayGenerico = datosOfertas.getParserGenerico()
+            }.then{_ in
+                self.myCollectionView.reloadData()
+            }.then{_ in
+                APESuperHUD.removeHUD(animated: true, presentingView: self.view, completion: nil)
+            }.catch{error in
+                self.present(muestraAlertVC("Lo sentimos",
+                                            messageData: "Algo salió mal"),
+                             animated: true,
+                             completion: nil)
+        }
+    }
 
+}
+
+
+extension DetalleGenericoTableViewController : UICollectionViewDelegate, UICollectionViewDataSource{
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return arrayGenerico.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let modeldata = arrayGenerico[indexPath.row]
+        let customCell = myCollectionView.dequeueReusableCell(withReuseIdentifier: "CollectionCell", for: indexPath) as! GenericCollectionViewCell
+        let cell = EVERISRellenarCeldas().tipoGenericoCollectionCell(customCell,
+                                                                     arrayGenerico: modeldata,
+                                                                     row: indexPath.row)
+        //customCellData = cell
+        return cell
+    }
+    
+    
+    
+    
 }

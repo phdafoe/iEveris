@@ -26,7 +26,7 @@ struct Constantes {
 }
 
 struct Colores {
-    let AZUL_NAV_TAB = #colorLiteral(red: 0.1764705926, green: 0.4980392158, blue: 0.7568627596, alpha: 1)
+    let AZUL_NAV_TAB = #colorLiteral(red: 0.1902901828, green: 0.1902901828, blue: 0.1902901828, alpha: 1)
     let BLANCO_TEXTO_NAV = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
 }
 

@@ -21,7 +21,7 @@ class ConcursosTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //self.title = "CONCURSOS"
+        self.title = "APPS"
         
         tableView.estimatedRowHeight = 60
         tableView.rowHeight = UITableViewAutomaticDimension

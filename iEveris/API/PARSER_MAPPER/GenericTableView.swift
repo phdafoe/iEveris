@@ -40,6 +40,25 @@ public class EVERISRellenarCeldas{
         return customCell
     }
     
+    func tipoGenericoCollectionCell(_ customCell : GenericCollectionViewCell, arrayGenerico : GenericModelData, row : Int) -> GenericCollectionViewCell{
+        
+        customCell.myValueRent.text = arrayGenerico.rentalPrice
+        
+        if let pathImagen = arrayGenerico.image {
+            customCell.myImagePoster.kf.setImage(with: ImageResource(downloadURL: URL(string: pathImagen)!),
+                                                  placeholder: #imageLiteral(resourceName: "placeholder"),
+                                                  options: [.transition(ImageTransition.fade(1))],
+                                                  progressBlock: nil,
+                                                  completionHandler: { (imageData, error, cacheType, imageUrl) in
+                                                    //guardamos las imágenes en un diccionario
+                                                    guard let imageDataDes = imageData else {return}
+                                                    diccionarioImagenes[arrayGenerico.id!] = imageDataDes
+            })
+        }
+        return customCell
+        
+    }
+    
     
 }
 

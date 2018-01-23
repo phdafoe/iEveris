@@ -20,7 +20,7 @@ class CuponesTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //self.title = "CUPONES"
+        self.title = "LIBROS"
         
         tableView.estimatedRowHeight = 60
         tableView.rowHeight = UITableViewAutomaticDimension
@@ -87,7 +87,7 @@ class CuponesTableViewController: UITableViewController {
     //MARK: - UTILS
     func llamadaGenerica(){
         let datosOfertas = ParserGenerico()
-        var idName = "toppaidebooks"
+        let idName = "toppaidebooks"
         APESuperHUD.showOrUpdateHUD(loadingIndicator: .standard, message: "Cargando", presentingView: self.view)
         firstly{
             return when(resolved: datosOfertas.getDatosGenerico(idName))
