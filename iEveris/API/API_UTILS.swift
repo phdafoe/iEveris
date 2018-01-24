@@ -32,8 +32,10 @@ struct Colores {
 
 struct LLamadas {
     
-    let BASE_ITUNES_TOP = "https://itunes.apple.com/us/rss/"
+    let BASE_ITUNES_TOP = "https://itunes.apple.com/%@/rss/"
     let LASTPATH_COMPONENT = "/limit=50/json"
+    
+    let BASE_ITUNES_GENERAL = "https://itunes.apple.com/%@/rss/%@/limit=%@/json"
     
     
 }

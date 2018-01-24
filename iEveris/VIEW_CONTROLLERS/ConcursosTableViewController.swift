@@ -94,11 +94,15 @@ class ConcursosTableViewController: UITableViewController {
     func llamadaGenerica(){
         let datosOfertas = ParserGenerico()
         let idName = "topfreeapplications"
+        let idCountry = "us"
         APESuperHUD.showOrUpdateHUD(loadingIndicator: .standard, message: "Cargando", presentingView: self.view)
         firstly{
-            return when(resolved: datosOfertas.getDatosGenerico(idName))
+            return when(resolved: datosOfertas.getDatosGenerico(idName, idCountry: idCountry, idNumber: randonNumber ()))
             }.then{_ in
-                self.arrayGenerico = datosOfertas.getParserGenerico()
+                datosOfertas.getParserGenerico({ (data) in
+                    guard let dataDes = data else{return}
+                    self.arrayGenerico = dataDes
+                })
             }.then{_ in
                 self.tableView.reloadData()
             }.then{_ in
