@@ -8,8 +8,9 @@
 
 import UIKit
 
-class GenericCollectionViewCell: UICollectionViewCell, ReuseIdentifierProtocol {
+class GenericCollectionViewCell: UICollectionViewCell {
     
+    //MARK: - IBOutlets
     @IBOutlet weak var myImagePoster: UIImageView!
     @IBOutlet weak var myValueRent: UILabel!
     

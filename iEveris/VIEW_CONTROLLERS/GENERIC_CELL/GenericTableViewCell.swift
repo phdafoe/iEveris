@@ -18,6 +18,7 @@ class GenericTableViewCell: UITableViewCell, ReuseIdentifierProtocol {
     @IBOutlet weak var myImporteOferta: UILabel!
     
 
+    //MARK: - Life Cycle
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

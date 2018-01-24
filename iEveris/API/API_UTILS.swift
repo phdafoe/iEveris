@@ -32,27 +32,6 @@ struct Colores {
 
 struct LLamadas {
     
-    let OFERTAS = "oferta"
-    let CUPONES = "cupon"
-    let CONCURSO = "concurso"
-    
-    let BASE_PHOTO_URL = "http://app.clubsinergias.es/uploads/promociones/"
-    
-    let PROMOCIONES_SERVICE = "promociones"
-    
-    let BASEURLIDPARSE = "http://app.clubsinergias.es/api_comercios.php?idparse="
-    let BASE_URL = "http://app.clubsinergias.es/api_comercios.php?"
-    let BASEURLIDCLIENTE = "http://app.clubsinergias.es/api_comercios.php?idcliente="
-    let BASEIDLOCALIDAD = "idlocalidad="
-    let BASEIDP = "&p="
-    let BASEIDTIPO = "&tipo="
-    
-    
-    let BASE_URL_CONCURSOS = "http://andresocampo.com/pruebas/iSaldos/concursos.json"
-    let BASE_URL_CUPONES = "http://andresocampo.com/pruebas/iSaldos/cupones.json"
-    let BASE_URL_OFERTAS = "http://andresocampo.com/pruebas/iSaldos/ofertas.json"
-    
-    
     let BASE_ITUNES_TOP = "https://itunes.apple.com/us/rss/"
     let LASTPATH_COMPONENT = "/limit=50/json"
     
@@ -62,7 +41,6 @@ struct LLamadas {
 struct CustomUserDefault {
     
     let USER_DEFAULT = UserDefaults.standard
-    let KEY_TAREAS = "tasks"
     let KEY_DESCRIPCION_POST = "descripcion"
     let KEY_IMAGEN_POST = "imagen"
 }

@@ -73,16 +73,17 @@ class PeliculasViewController: UIViewController {
         }
     }
     
-    //MARK: - UTILS
     @objc func refreshControll(){
+        llamadaGenerica()
         myCollectionView!.reloadData()
         self.refresh?.endRefreshing()
+        
     }
 
 }
 
 
-
+//MARK: - UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout
 extension PeliculasViewController : UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {

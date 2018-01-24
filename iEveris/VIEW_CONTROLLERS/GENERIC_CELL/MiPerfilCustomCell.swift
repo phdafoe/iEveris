@@ -12,14 +12,12 @@ import UIKit
 class MiPerfilCustomCell: UITableViewCell, ReuseIdentifierProtocol {
     
     //MARK: - IBOUTLET
-    
     @IBOutlet weak var myFotoFondoPerfil: UIImageView!
     @IBOutlet weak var myFotoPerfilUsuario: UIImageView!
     @IBOutlet weak var myNombrePerfilUsuario: UILabel!
     @IBOutlet weak var myFondoDegradadoFotoPerfil: UIImageView!
     @IBOutlet weak var myUsernameSportReviewLBL: UILabel!
     @IBOutlet weak var myBotonAjustesPerfilUsuario: UIButton!
-    
     @IBOutlet weak var degradadoFondo: UIImageView!
     @IBOutlet weak var degradadoFoto: UIImageView!
     @IBOutlet weak var myUsuarioGenerales: UIButton!
