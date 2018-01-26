@@ -28,7 +28,8 @@
 		41689E5B1FF1459500359DDD /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41689E601FF1459500359DDD /* Kingfisher.framework */; };
 		41689E5C1FF1459500359DDD /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41689E611FF1459500359DDD /* PromiseKit.framework */; };
 		41689E5D1FF1459500359DDD /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41689E621FF1459500359DDD /* SwiftyJSON.framework */; };
-		41689E651FF1469F00359DDD /* ParserGenerico.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41689E641FF1469F00359DDD /* ParserGenerico.swift */; };
+		41689E651FF1469F00359DDD /* ProviderGenerico.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41689E641FF1469F00359DDD /* ProviderGenerico.swift */; };
+		4169BDFF201BC1F400733DD3 /* InteractorGenerico.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4169BDFE201BC1F400733DD3 /* InteractorGenerico.swift */; };
 		4170C3151FEEBE5D00A9F50A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4170C3141FEEBE5D00A9F50A /* AppDelegate.swift */; };
 		4170C31A1FEEBE5D00A9F50A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4170C3181FEEBE5D00A9F50A /* Main.storyboard */; };
 		4170C31C1FEEBE5D00A9F50A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4170C31B1FEEBE5D00A9F50A /* Assets.xcassets */; };
@@ -63,7 +64,8 @@
 		41689E601FF1459500359DDD /* Kingfisher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Kingfisher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		41689E611FF1459500359DDD /* PromiseKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = PromiseKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		41689E621FF1459500359DDD /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		41689E641FF1469F00359DDD /* ParserGenerico.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParserGenerico.swift; sourceTree = "<group>"; };
+		41689E641FF1469F00359DDD /* ProviderGenerico.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderGenerico.swift; sourceTree = "<group>"; };
+		4169BDFE201BC1F400733DD3 /* InteractorGenerico.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractorGenerico.swift; sourceTree = "<group>"; };
 		4170C3111FEEBE5D00A9F50A /* iEveris.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iEveris.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4170C3141FEEBE5D00A9F50A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4170C3191FEEBE5D00A9F50A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -165,7 +167,8 @@
 		41689E631FF1465400359DDD /* PARSER_MAPPER */ = {
 			isa = PBXGroup;
 			children = (
-				41689E641FF1469F00359DDD /* ParserGenerico.swift */,
+				41689E641FF1469F00359DDD /* ProviderGenerico.swift */,
+				4169BDFE201BC1F400733DD3 /* InteractorGenerico.swift */,
 				41227F5D1FF8EAEA0022FD6E /* APITaskManager.swift */,
 				41227F5F1FF8F08E0022FD6E /* GenericTableView.swift */,
 			);
@@ -354,12 +357,13 @@
 				4100ADAD1FF141A300565366 /* HerramientaPostMuroTableViewController.swift in Sources */,
 				4100ADA91FF1416900565366 /* WebGenericoViewController.swift in Sources */,
 				4100ADB51FF143CD00565366 /* GenericModelData.swift in Sources */,
-				41689E651FF1469F00359DDD /* ParserGenerico.swift in Sources */,
+				41689E651FF1469F00359DDD /* ProviderGenerico.swift in Sources */,
 				4100ADA51FF1414300565366 /* CuponesTableViewController.swift in Sources */,
 				4136EC311FF9474B00192384 /* HomeNavigationViewController.swift in Sources */,
 				4100ADB21FF1424B00565366 /* GenericTableViewCell.swift in Sources */,
 				41227F601FF8F08E0022FD6E /* GenericTableView.swift in Sources */,
 				4136EC351FF94B0F00192384 /* MiPerfilCustomCell.swift in Sources */,
+				4169BDFF201BC1F400733DD3 /* InteractorGenerico.swift in Sources */,
 				4170C3151FEEBE5D00A9F50A /* AppDelegate.swift in Sources */,
 				4100AD9C1FF13B2C00565366 /* API_UTILS.swift in Sources */,
 				4100ADAB1FF1418700565366 /* MuroTableViewController.swift in Sources */,

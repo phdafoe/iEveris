@@ -8,11 +8,13 @@
 
 import Foundation
 import UIKit
+import SwiftyJSON
 
 let CONSTANTES = Constantes()
 let taskManager = APITaskManager.sharedInstance
 typealias diccionario = [String : Any]
 typealias arrayDiccionario = [diccionario]
+var jsonDataGenerico : JSON?
 
 var imagenSeleccionada : UIImage?
 var diccionarioImagenes = [String: UIImage?]()

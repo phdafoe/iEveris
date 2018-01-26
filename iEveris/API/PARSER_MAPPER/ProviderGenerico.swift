@@ -11,10 +11,8 @@ import SwiftyJSON
 import PromiseKit
 import Alamofire
 
-class ParserGenerico: NSObject {
-        
-    var jsonDataGenerico : JSON?
-    
+class ProviderGenerico: NSObject {
+            
     /// getDatosGenerico()
     ///
     /// - Parameter idName: idName : String
@@ -29,20 +27,9 @@ class ParserGenerico: NSObject {
         /*let request = URLRequest(url: URL(string: CONSTANTES.LLAMADAS.BASE_ITUNES_TOP + idName + CONSTANTES.LLAMADAS.LASTPATH_COMPONENT)!)*/
         print(request)
         return Alamofire.request(request).responseJSON().then{(data) -> JSON in
-            self.jsonDataGenerico = JSON(data)
-            return self.jsonDataGenerico!
+            jsonDataGenerico = JSON(data)
+            return jsonDataGenerico!
         }
     }
     
-    /// getParserGenerico()
-    ///
-    /// - Parameter completion: @escaping (_ arrayData :[GenericModelData]?) -> ()
-    func getParserGenerico(_ completion : @escaping (_ arrayData :[GenericModelData]?) -> ()) {
-        var arrayMovies = [GenericModelData]()
-            for c_movie in (jsonDataGenerico?["feed"]["entry"].arrayValue)!{
-                let modelData = GenericModelData(json: c_movie)
-                arrayMovies.append(modelData)
-            }
-            completion(arrayMovies)
-    }
 }
