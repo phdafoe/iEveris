@@ -8,7 +8,7 @@
 
 import Foundation
 
-class ParserGenerico{
+class ParserGenerico : NSObject {
     
     /// getParserGenerico()
     ///

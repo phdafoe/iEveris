@@ -11,7 +11,7 @@ import SwiftyJSON
 import PromiseKit
 import Alamofire
 
-class ProviderGenerico: NSObject {
+class ProviderService : NSObject {
             
     /// getDatosGenerico()
     ///

@@ -92,7 +92,7 @@ class ConcursosTableViewController: UITableViewController {
     
     //MARK: - UTILS
     func llamadaGenerica(){
-        let providerService = ProviderGenerico()
+        let providerService = ProviderService()
         let parserGenerico = ParserGenerico()
         let idName = "topfreeapplications"
         let idCountry = "us"

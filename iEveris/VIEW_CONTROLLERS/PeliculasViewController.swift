@@ -41,7 +41,7 @@ class PeliculasViewController: UIViewController {
     
     //MARK: - UTILS
     func llamadaGenerica(){
-        let providerService = ProviderGenerico()
+        let providerService = ProviderService()
         let parserGenerico = ParserGenerico()
         let idName = "topmovies"
         let idCountry = "es"

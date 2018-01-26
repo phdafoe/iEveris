@@ -86,7 +86,7 @@ class CuponesTableViewController: UITableViewController {
     
     //MARK: - UTILS
     func llamadaGenerica(){
-        let providerService = ProviderGenerico()
+        let providerService = ProviderService()
         let parserGenerico = ParserGenerico()
         let idName = "toppaidebooks"
         let idCountry = "es"
