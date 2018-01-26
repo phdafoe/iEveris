@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "0B19DCBC5874DC35729EECC45C5BF227"
+               BlueprintIdentifier = "3DFEA69B2E339BA0F60137E38E68838C"
                BuildableName = "Pods_iEveris.framework"
                BlueprintName = "Pods-iEveris"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -47,7 +47,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "0B19DCBC5874DC35729EECC45C5BF227"
+            BlueprintIdentifier = "3DFEA69B2E339BA0F60137E38E68838C"
             BuildableName = "Pods_iEveris.framework"
             BlueprintName = "Pods-iEveris"
             ReferencedContainer = "container:Pods.xcodeproj">

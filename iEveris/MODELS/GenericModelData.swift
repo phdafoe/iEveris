@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftyJSON
 
 class GenericModelData: NSObject {
     
@@ -19,17 +20,17 @@ class GenericModelData: NSObject {
     var releaseDate : String?
     var rentalPrice : String?
     var link : String?
-    
-    init(pId : String, pTitle : String, pSummary : String, pImage : String, pCategory : String, pDirector : String, pReleaseDate : String, pRentalPrice : String, pLink : String) {
-        self.id = pId
-        self.title = pTitle
-        self.summary = pSummary
-        self.image = pImage
-        self.category = pCategory
-        self.director = pDirector
-        self.releaseDate = pReleaseDate
-        self.rentalPrice = pRentalPrice
-        self.link = pLink
+        
+    init(json : JSON) {
+        self.id = dimeString(json["id"]["attributes"], nombre: "im:id")
+        self.title = dimeString(json["im:name"], nombre: "label")
+        self.summary = dimeString(json["summary"], nombre: "label")
+        self.image = dimeString(json["im:image"][2], nombre: "label".replacingOccurrences(of: "170x170", with: "500x500"))
+        self.category = dimeString(json["category"]["attributes"], nombre: "label")
+        self.director = dimeString(json["im:artist"], nombre: "label")
+        self.releaseDate = dimeString(json["im:releaseDate"]["attributes"], nombre: "label")
+        self.rentalPrice = dimeString(json["im:price"], nombre: "label")
+        self.link = dimeString(json["link"][0]["attributes"], nombre: "href")
     }
 }
 
