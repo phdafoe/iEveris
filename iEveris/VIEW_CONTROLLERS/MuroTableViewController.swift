@@ -15,7 +15,8 @@ class MuroTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.title = "SOEVER"
+        let logoImage = UIImage(named: "title_So_Ever")
+        self.navigationItem.titleView = UIImageView(image: logoImage)
         
         tableView.estimatedRowHeight = 60
         tableView.rowHeight = UITableViewAutomaticDimension

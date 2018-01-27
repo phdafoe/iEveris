@@ -28,6 +28,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //Aqui personalizamos la UI de la app
         personalizaUI()
         
+        
         return true
     }
 

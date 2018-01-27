@@ -39,6 +39,10 @@ class PeliculasViewController: UIViewController {
 
     }
     
+    override var preferredStatusBarStyle : UIStatusBarStyle {
+        return .lightContent
+    }
+    
     //MARK: - UTILS
     func llamadaGenerica(){
         let providerService = ProviderService()

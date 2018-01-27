@@ -16,6 +16,7 @@ class HomeNavigationViewController: UINavigationController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
         let iphoneSize = UIScreen.main.bounds.height
         
         botonFlotante.frame = CGRect(origin: CGPoint.zero, size: CGSize(width: 64.0, height: 64.0))

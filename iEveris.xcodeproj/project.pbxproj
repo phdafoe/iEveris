@@ -32,8 +32,10 @@
 		4169BDFF201BC1F400733DD3 /* ParserGenerico.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4169BDFE201BC1F400733DD3 /* ParserGenerico.swift */; };
 		4170C3151FEEBE5D00A9F50A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4170C3141FEEBE5D00A9F50A /* AppDelegate.swift */; };
 		4170C31A1FEEBE5D00A9F50A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4170C3181FEEBE5D00A9F50A /* Main.storyboard */; };
-		4170C31C1FEEBE5D00A9F50A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4170C31B1FEEBE5D00A9F50A /* Assets.xcassets */; };
 		4170C31F1FEEBE5D00A9F50A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4170C31D1FEEBE5D00A9F50A /* LaunchScreen.storyboard */; };
+		4180D4E3201CED9C00049519 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4180D4E2201CED9C00049519 /* Assets.xcassets */; };
+		4180D4E5201CEE8A00049519 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4180D4E4201CEE8A00049519 /* SplashViewController.swift */; };
+		4180D4E7201CEFF600049519 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4180D4E6201CEFF600049519 /* TabBarViewController.swift */; };
 		419A44C52014E7AE00F28DE7 /* ReuseIdentifierProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419A44C42014E7AE00F28DE7 /* ReuseIdentifierProtocol.swift */; };
 		B48272962017AAC200435AD9 /* GenericCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48272952017AAC200435AD9 /* GenericCollectionViewCell.swift */; };
 		B48272982017AB5300435AD9 /* PeliculasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48272972017AB5300435AD9 /* PeliculasViewController.swift */; };
@@ -69,9 +71,11 @@
 		4170C3111FEEBE5D00A9F50A /* iEveris.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iEveris.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4170C3141FEEBE5D00A9F50A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4170C3191FEEBE5D00A9F50A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		4170C31B1FEEBE5D00A9F50A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4170C31E1FEEBE5D00A9F50A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4170C3201FEEBE5D00A9F50A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4180D4E2201CED9C00049519 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4180D4E4201CEE8A00049519 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		4180D4E6201CEFF600049519 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		419A44C42014E7AE00F28DE7 /* ReuseIdentifierProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReuseIdentifierProtocol.swift; sourceTree = "<group>"; };
 		B48272952017AAC200435AD9 /* GenericCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericCollectionViewCell.swift; sourceTree = "<group>"; };
 		B48272972017AB5300435AD9 /* PeliculasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeliculasViewController.swift; sourceTree = "<group>"; };
@@ -131,6 +135,8 @@
 			isa = PBXGroup;
 			children = (
 				4100ADAF1FF1421800565366 /* GENERIC_CELL */,
+				4180D4E4201CEE8A00049519 /* SplashViewController.swift */,
+				4180D4E6201CEFF600049519 /* TabBarViewController.swift */,
 				B48272972017AB5300435AD9 /* PeliculasViewController.swift */,
 				4100ADA21FF1413800565366 /* ConcursosTableViewController.swift */,
 				4100ADA41FF1414300565366 /* CuponesTableViewController.swift */,
@@ -201,8 +207,8 @@
 				4100AD9A1FF13AFA00565366 /* API */,
 				4170C3141FEEBE5D00A9F50A /* AppDelegate.swift */,
 				4170C3181FEEBE5D00A9F50A /* Main.storyboard */,
-				4170C31B1FEEBE5D00A9F50A /* Assets.xcassets */,
 				4170C31D1FEEBE5D00A9F50A /* LaunchScreen.storyboard */,
+				4180D4E2201CED9C00049519 /* Assets.xcassets */,
 				4170C3201FEEBE5D00A9F50A /* Info.plist */,
 			);
 			path = iEveris;
@@ -273,8 +279,8 @@
 				4170C31F1FEEBE5D00A9F50A /* LaunchScreen.storyboard in Resources */,
 				4136EC341FF94B0F00192384 /* MiPerfilCustomCell.xib in Resources */,
 				4100ADB31FF1424B00565366 /* GenericTableViewCell.xib in Resources */,
-				4170C31C1FEEBE5D00A9F50A /* Assets.xcassets in Resources */,
 				4170C31A1FEEBE5D00A9F50A /* Main.storyboard in Resources */,
+				4180D4E3201CED9C00049519 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -351,6 +357,7 @@
 			files = (
 				4100AD9E1FF13C4800565366 /* API_HELPERS.swift in Sources */,
 				4100ADA71FF1415400565366 /* DetalleGenericoTableViewController.swift in Sources */,
+				4180D4E7201CEFF600049519 /* TabBarViewController.swift in Sources */,
 				B48272962017AAC200435AD9 /* GenericCollectionViewCell.swift in Sources */,
 				41227F5E1FF8EAEA0022FD6E /* APITaskManager.swift in Sources */,
 				B48272982017AB5300435AD9 /* PeliculasViewController.swift in Sources */,
@@ -361,6 +368,7 @@
 				4100ADA51FF1414300565366 /* CuponesTableViewController.swift in Sources */,
 				4136EC311FF9474B00192384 /* HomeNavigationViewController.swift in Sources */,
 				4100ADB21FF1424B00565366 /* GenericTableViewCell.swift in Sources */,
+				4180D4E5201CEE8A00049519 /* SplashViewController.swift in Sources */,
 				41227F601FF8F08E0022FD6E /* GenericTableView.swift in Sources */,
 				4136EC351FF94B0F00192384 /* MiPerfilCustomCell.swift in Sources */,
 				4169BDFF201BC1F400733DD3 /* ParserGenerico.swift in Sources */,

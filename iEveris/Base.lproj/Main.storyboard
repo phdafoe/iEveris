@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="kb0-zk-UgR">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Xhy-gh-P8A">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -210,10 +212,10 @@
             </objects>
             <point key="canvasLocation" x="862" y="2105"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Tab Bar View Controller-->
         <scene sceneID="TFY-Br-jcU">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="kb0-zk-UgR" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="TabBarViewController" automaticallyAdjustsScrollViewInsets="NO" id="kb0-zk-UgR" customClass="TabBarViewController" customModule="iEveris" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="W0E-yD-fR3">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
@@ -235,7 +237,7 @@
         <scene sceneID="aNm-jp-e6U">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="t4j-cP-TC3" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="PELICULAS" id="DQY-o5-gyR"/>
+                    <tabBarItem key="tabBarItem" title="PELICULAS" image="icon_movies" id="DQY-o5-gyR"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="1CX-ZF-J6I">
                         <rect key="frame" x="0.0" y="44" width="375" height="44"/>
@@ -254,7 +256,7 @@
         <scene sceneID="NK1-As-tKa">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="oXA-QJ-6wO" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="APPS" id="ThO-L1-QLP"/>
+                    <tabBarItem key="tabBarItem" title="APPS" image="icon_apps" id="ThO-L1-QLP"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="gUA-21-t2c">
                         <rect key="frame" x="0.0" y="44" width="375" height="44"/>
@@ -273,7 +275,7 @@
         <scene sceneID="5aE-Rx-pde">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="txe-06-O0Y" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="LIBROS" id="Z2D-G2-Eog"/>
+                    <tabBarItem key="tabBarItem" title="LIBROS" image="icon_books" id="Z2D-G2-Eog"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Gs7-NU-IBg">
                         <rect key="frame" x="0.0" y="44" width="375" height="44"/>
@@ -288,11 +290,11 @@
             </objects>
             <point key="canvasLocation" x="43.200000000000003" y="1410.5911330049262"/>
         </scene>
-        <!--SOEVER-->
+        <!--SO.EVER-->
         <scene sceneID="aaZ-KD-H56">
             <objects>
                 <navigationController storyboardIdentifier="HomeNavigationViewController" automaticallyAdjustsScrollViewInsets="NO" id="aPE-DG-5Iq" customClass="HomeNavigationViewController" customModule="iEveris" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="SOEVER" id="PDR-wJ-Hpi"/>
+                    <tabBarItem key="tabBarItem" title="SO.EVER" image="icon_soever" id="PDR-wJ-Hpi"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Gri-ut-uoA">
                         <rect key="frame" x="0.0" y="44" width="375" height="44"/>
@@ -644,12 +646,25 @@
                                                 <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="7YA-cu-tMd">
                                                     <rect key="frame" x="0.0" y="0.0" width="375" height="289"/>
                                                 </mapView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5DA-DW-lph">
+                                                    <rect key="frame" x="318" y="232" width="46" height="46"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="46" id="azY-y1-ZWX"/>
+                                                        <constraint firstAttribute="height" constant="46" id="ugZ-qO-YiY"/>
+                                                    </constraints>
+                                                    <state key="normal" backgroundImage="icon_search_map"/>
+                                                    <connections>
+                                                        <action selector="muestraRutaConOtraAppACTION:" destination="97d-uN-rkp" eventType="touchUpInside" id="atL-Bf-3Mf"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="7YA-cu-tMd" firstAttribute="top" secondItem="vGM-o5-9xn" secondAttribute="top" id="30K-37-Tci"/>
+                                                <constraint firstAttribute="trailing" secondItem="5DA-DW-lph" secondAttribute="trailing" constant="11" id="53e-8Y-BsG"/>
                                                 <constraint firstAttribute="trailing" secondItem="7YA-cu-tMd" secondAttribute="trailing" id="Bmg-rB-g3N"/>
                                                 <constraint firstItem="7YA-cu-tMd" firstAttribute="leading" secondItem="vGM-o5-9xn" secondAttribute="leading" id="Bp4-oM-26Z"/>
                                                 <constraint firstAttribute="bottom" secondItem="7YA-cu-tMd" secondAttribute="bottom" id="yRu-dd-1bg"/>
+                                                <constraint firstAttribute="bottom" secondItem="5DA-DW-lph" secondAttribute="bottom" constant="11" id="z8p-5m-dlD"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -708,7 +723,7 @@
                                     <constraint firstAttribute="width" constant="21" id="QQW-Qr-aNB"/>
                                     <constraint firstAttribute="height" constant="21" id="ZRl-jC-CgO"/>
                                 </constraints>
-                                <state key="normal" backgroundImage="cerrasX"/>
+                                <state key="normal" backgroundImage="icon_Cerrar_negro"/>
                                 <connections>
                                     <action selector="myCerrarVentanaACTION:" destination="UGO-ZP-h4B" eventType="touchUpInside" id="aVs-No-0YU"/>
                                 </connections>
@@ -893,7 +908,7 @@
                         </barButtonItem>
                     </toolbarItems>
                     <navigationItem key="navigationItem" title="NUEVA TAREA" id="Ptb-S2-D6w">
-                        <barButtonItem key="rightBarButtonItem" title="X" id="tMv-u5-8ad">
+                        <barButtonItem key="rightBarButtonItem" image="icon_Cerrar_blanco" id="tMv-u5-8ad">
                             <connections>
                                 <action selector="ocultarVC:" destination="Qum-t9-NPS" id="9xf-UH-zOk"/>
                             </connections>
@@ -912,14 +927,53 @@
             </objects>
             <point key="canvasLocation" x="2338" y="2105"/>
         </scene>
+        <!--Splash View Controller-->
+        <scene sceneID="VKy-3g-vvH">
+            <objects>
+                <viewController storyboardIdentifier="SplashViewController" id="Xhy-gh-P8A" customClass="SplashViewController" customModule="iEveris" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="AD5-Vm-lbP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icono_spash" translatesAutoresizingMaskIntoConstraints="NO" id="gMh-af-rNE">
+                                <rect key="frame" x="37" y="256" width="300" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="gMh-af-rNE" secondAttribute="height" multiplier="1:1" id="9xc-7v-NBn"/>
+                                    <constraint firstAttribute="height" constant="300" id="eHi-t0-DHg"/>
+                                    <constraint firstAttribute="width" constant="300" id="mz6-GN-BXn"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="gMh-af-rNE" firstAttribute="centerX" secondItem="AD5-Vm-lbP" secondAttribute="centerX" id="NcA-su-9G6"/>
+                            <constraint firstItem="gMh-af-rNE" firstAttribute="centerY" secondItem="AD5-Vm-lbP" secondAttribute="centerY" id="arq-pm-NRo"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Mjf-WP-hgK"/>
+                    </view>
+                    <connections>
+                        <outlet property="myImageLogoSaldos" destination="gMh-af-rNE" id="arW-c2-gOw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="r6f-ZK-iQe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2546" y="1091"/>
+        </scene>
     </scenes>
     <resources>
         <image name="botonCerrarImagen" width="16" height="16"/>
         <image name="camara" width="35" height="35"/>
-        <image name="cerrasX" width="140" height="140"/>
         <image name="degradado" width="320" height="70"/>
+        <image name="icon_Cerrar_blanco" width="35" height="35"/>
+        <image name="icon_Cerrar_negro" width="35" height="35"/>
+        <image name="icon_apps" width="35" height="35"/>
+        <image name="icon_books" width="35" height="35"/>
+        <image name="icon_movies" width="35" height="35"/>
+        <image name="icon_search_map" width="35" height="35"/>
+        <image name="icon_soever" width="35" height="35"/>
+        <image name="icono_spash" width="300" height="300"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Ycf-HP-uVw"/>
+        <segue reference="HM4-Fu-Pi3"/>
     </inferredMetricsTieBreakers>
 </document>

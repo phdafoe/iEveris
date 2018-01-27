@@ -19,6 +19,8 @@ class DetalleGenericoTableViewController: UITableViewController {
     var detalleImagenData : UIImage?
     //MARK: - Variables locales
     var arrayGenerico : [GenericModelData] = []
+    let latitud = 40.352494
+    let longitud = -3.809620
     
     //MARK: - IBOutlets
     @IBOutlet weak var myImagenOferta: UIImageView!
@@ -51,11 +53,14 @@ class DetalleGenericoTableViewController: UITableViewController {
         }
     }
     
+    @IBAction func muestraRutaConOtraAppACTION(_ sender: UIButton) {
+        openMapForPlace()
+    }
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-       
         
         //LLAMADA A DATOS
         llamadaGenerica()
@@ -81,11 +86,11 @@ class DetalleGenericoTableViewController: UITableViewController {
             myTelefonoFijo.setTitle("663940573", for: .normal)
             
         }
-        let region = MKCoordinateRegion(center: CLLocationCoordinate2DMake(40.352494, -3.809620), span: MKCoordinateSpan(latitudeDelta: 0.001, longitudeDelta: 0.001))
+        let region = MKCoordinateRegion(center: CLLocationCoordinate2DMake(latitud, longitud), span: MKCoordinateSpan(latitudeDelta: 0.001, longitudeDelta: 0.001))
         myMapView.setRegion(region, animated: true)
         
         let annotation = MKPointAnnotation()
-        annotation.coordinate = CLLocationCoordinate2DMake(40.352494, -3.809620)
+        annotation.coordinate = CLLocationCoordinate2DMake(latitud, longitud)
         annotation.title = movie?.title
         annotation.subtitle = movie?.title
         myMapView.addAnnotation(annotation)
@@ -122,6 +127,21 @@ class DetalleGenericoTableViewController: UITableViewController {
         let webVC = self.storyboard?.instantiateViewController(withIdentifier: "WebGenericoViewController") as! WebGenericoViewController
         webVC.urlWeb = url
         present(webVC, animated: true, completion: nil)
+    }
+    
+    //Muestra Mapa de Apple
+    func openMapForPlace() {
+        let regionDistance:CLLocationDistance = 10000
+        let coordinates = CLLocationCoordinate2DMake(latitud, longitud)
+        let regionSpan = MKCoordinateRegionMakeWithDistance(coordinates, regionDistance, regionDistance)
+        let options = [
+            MKLaunchOptionsMapCenterKey: NSValue(mkCoordinate: regionSpan.center),
+            MKLaunchOptionsMapSpanKey: NSValue(mkCoordinateSpan: regionSpan.span)
+        ]
+        let placemark = MKPlacemark(coordinate: coordinates, addressDictionary: nil)
+        let mapItem = MKMapItem(placemark: placemark)
+        mapItem.name =  movie?.title
+        mapItem.openInMaps(launchOptions: options)
     }
     
     
