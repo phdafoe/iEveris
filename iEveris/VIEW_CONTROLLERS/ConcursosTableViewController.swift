@@ -23,8 +23,6 @@ class ConcursosTableViewController: UITableViewController {
         
         self.title = "APPS"
         
-        tableView.estimatedRowHeight = 60
-        tableView.rowHeight = UITableViewAutomaticDimension
         
         //LLAMADA A DATOS
         llamadaGenerica()

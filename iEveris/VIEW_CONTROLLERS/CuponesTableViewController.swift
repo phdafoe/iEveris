@@ -22,8 +22,6 @@ class CuponesTableViewController: UITableViewController {
         
         self.title = "LIBROS"
         
-        tableView.estimatedRowHeight = 60
-        tableView.rowHeight = UITableViewAutomaticDimension
         
 
         //LLAMADA A DATOS
