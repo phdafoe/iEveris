@@ -16,10 +16,10 @@ class SplashViewController: UIViewController {
     
     //MARK: - IBOutlets
     @IBOutlet weak var myImageLogoSaldos: UIImageView!
-
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
         showData()
     }
     
@@ -34,7 +34,6 @@ class SplashViewController: UIViewController {
                                                                                             userInfo: nil,
                                                                                             repeats: false)
         })
-        
         viewAnimator.startAnimation()
     }
     
